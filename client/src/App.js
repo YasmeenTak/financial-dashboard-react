@@ -1,19 +1,39 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Sidedbar from './Components/Sidedbar/Sidedbar';
+import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
+import NotificationManagement from './Components/NotificationManagement/Notification';
+
+import Home from './Components/Home/Home';
 function App() {
   return (
-    <div className='App'>
-      {/* <Navbar /> */}
-      <Login />
-      <div className='containerr'>
-        {/* <Sidedbar /> */}
-        {/* <div className='otherPages'></div> */}
+    <Router>
+      <div className='App'>
+        <Navbar />
+        {/* <Login /> */}
+        <div className='containerr'>
+          <Sidedbar />
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+
+            <Route path='/DebtorManagement'>
+              <DebtorManagement />
+            </Route>
+
+            <Route path='/NotificationManagement'>
+              <NotificationManagement />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

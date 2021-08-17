@@ -1,11 +1,8 @@
 .containerr {
   display: flex;
-  margin-top: 10px;
+  /* margin-top:10px; */
 }
 
-.otherPages {
-  flex: 4;
-}
 /* 
 .App {
   text-align: center;
