@@ -1,3 +1,12 @@
+.containerr {
+  display: flex;
+  margin-top: 10px;
+}
+
+.otherPages {
+  flex: 4;
+}
+/* 
 .App {
   text-align: center;
 }
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
