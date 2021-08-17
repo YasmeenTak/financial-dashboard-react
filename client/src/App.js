@@ -7,11 +7,11 @@ import Sidedbar from './Components/Sidedbar/Sidedbar';
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Login />
       <div className='containerr'>
-        <Sidedbar />
-        {/* <Login /> */}
-        <div className='otherPages'></div>
+        {/* <Sidedbar /> */}
+        {/* <div className='otherPages'></div> */}
       </div>
     </div>
   );
