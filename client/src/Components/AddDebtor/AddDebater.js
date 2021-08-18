@@ -64,20 +64,12 @@ export default function AddDebater() {
   const classes = useStyles();
   const [currency, setCurrency] = React.useState('CP');
   const [values, setValues] = React.useState({
-    amount: '',
     password: '',
-    weight: '',
-    weightRange: '',
-    showPassword: false,
   });
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
-
-  // const handleChange = (event) => {
-  //   setCurrency(event.target.value);
-  // };
 
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
@@ -100,6 +92,7 @@ export default function AddDebater() {
                 id='standard-basic'
                 label='Name'
                 className={classes.addTextField}
+                fullWidth
               />
             </Grid>
             <Grid item xs={6}>
