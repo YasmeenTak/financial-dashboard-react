@@ -1,5 +1,5 @@
 .sidebar {
-  flex: 0.9;
+  flex: 0.8;
   height: calc(100vh - 50px);
   position: sticky;
   top: 50px;
@@ -21,19 +21,19 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
 }
 
 .sidebarListItem.active,
 .sidebarListItem:hover {
-  color: #ed1b24;
+  color: #fd5353;
   background-color: rgb(240, 240, 255);
 }
 
 .sidebarSubListItem.active,
 .sidebarSubListItem:hover {
-  color: #ed1b24;
+  color: #fd5353;
   background-color: rgb(240, 240, 255);
 }
 .sidebarIcon {

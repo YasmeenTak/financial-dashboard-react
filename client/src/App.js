@@ -9,6 +9,7 @@ import Sidedbar from './Components/Sidedbar/Sidedbar';
 import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
 import NotificationManagement from './Components/NotificationManagement/Notification';
 import TableNotif from './Components/TableNotif/TableNotif';
+import AddDebater from './Components/AddDebtor/AddDebater';
 
 import Home from './Components/Home/Home';
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Navbar />
         {/* <TableNotif /> */}
         {/* <Login /> */}
+        {/* <Sidedbar /> */}
+        {/* <AddDebater /> */}
         <div className='containerr'>
           <Sidedbar />
           <Switch>
@@ -33,7 +36,6 @@ function App() {
               <NotificationManagement />
             </Route>
           </Switch>
-
         </div>
       </div>
     </Router>

@@ -141,6 +141,7 @@
 // ---------------------------------------------------------------------------------
 
 import React from 'react';
+import './style.css';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -160,8 +161,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    margin: '40px',
-    borderRadius: '10px',
+    margin: '30px',
+    borderRadius: '15px',
   },
 }));
 
@@ -346,6 +347,7 @@ export default function ReactVirtualizedTable() {
   return (
     <Grid item xs={12}>
       <Paper className={classes.paper}>
+        <p className='notfiTitle'> Notifications Management</p>
         <Paper style={{ height: 400, width: '100%' }}>
           <VirtualizedTable
             rowCount={rows.length}

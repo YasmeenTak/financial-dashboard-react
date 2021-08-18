@@ -23,7 +23,7 @@ export default function Sidedbar() {
             </li>
             <li className='sidebarListItem'>
               <NotificationsNoneIcon className='sidebarIcon' /> NOTIFICATIONS
-              MANAGMENT
+              MANAGEMENT
             </li>
             <li className='sidebarListItem'>
               <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT

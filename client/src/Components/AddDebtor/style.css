@@ -1,0 +1,14 @@
+/* .addDebater {
+  flex: 4;
+  background-color: #f5f9ff;
+} */
+
+.addTitle {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: -5px;
+  font-weight: bold;
+  color: #2c3758;
+}
+
+
