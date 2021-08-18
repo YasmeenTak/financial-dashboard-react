@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Sidedbar from './Components/Sidedbar/Sidedbar';
 import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
 import NotificationManagement from './Components/NotificationManagement/Notification';
+import TableNotif from './Components/TableNotif/TableNotif';
 
 import Home from './Components/Home/Home';
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div className='App'>
         <Navbar />
+        {/* <TableNotif /> */}
         {/* <Login /> */}
         <div className='containerr'>
           <Sidedbar />
@@ -31,6 +33,7 @@ function App() {
               <NotificationManagement />
             </Route>
           </Switch>
+
         </div>
       </div>
     </Router>
