@@ -12,6 +12,7 @@ import TableNotif from './Components/TableNotif/TableNotif';
 import AddDebater from './Components/AddDebtor/AddDebater';
 
 import Home from './Components/Home/Home';
+import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
 function App() {
   return (
     <Router>
@@ -20,7 +21,9 @@ function App() {
         {/* <TableNotif /> */}
         {/* <Login /> */}
         {/* <Sidedbar /> */}
+      
         {/* <AddDebater /> */}
+        {/* <AddPersonnel /> */}
         <div className='containerr'>
           <Sidedbar />
           <Switch>
