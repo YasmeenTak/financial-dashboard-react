@@ -45,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
     listStyle: 'none',
     padding: theme.spacing(0.5),
     margin: 0,
+    border: '1px solid #E9E9F0',
+    borderRadius: '10px',
   },
   chip: {
     margin: theme.spacing(0.5),
@@ -53,11 +55,10 @@ const useStyles = makeStyles((theme) => ({
 export default function AddPersonnel() {
   const classes = useStyles();
   const [chipData, setChipData] = React.useState([
-    { key: 0, label: 'Angular' },
-    { key: 1, label: 'jQuery' },
-    { key: 2, label: 'Polymer' },
-    { key: 3, label: 'React' },
-    { key: 4, label: 'Vue.js' },
+    { key: 0, label: 'administration' },
+    { key: 1, label: 'Banking' },
+    { key: 2, label: 'Claims' },
+    { key: 3, label: 'Claims' },
   ]);
 
   const handleDelete = (chipToDelete) => () => {
@@ -101,7 +102,7 @@ export default function AddPersonnel() {
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Paper component='ul' className={classes.chipAddPersonal}>
+                <div component='ul' className={classes.chipAddPersonal}>
                   {chipData.map((data) => {
                     let icon;
 
@@ -124,7 +125,7 @@ export default function AddPersonnel() {
                       </li>
                     );
                   })}
-                </Paper>
+                </div>
               </Grid>
               <Grid item xs={12}>
                 <Button
