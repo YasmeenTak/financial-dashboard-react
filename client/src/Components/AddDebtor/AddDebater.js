@@ -5,6 +5,8 @@ import './style.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -27,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     margin: '30px',
     borderRadius: '15px',
-    height: '400px',
   },
   backArrow: {
     fontSize: 'small',
@@ -37,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
   AddDebaterBtn: {
     color: 'white',
     backgroundColor: '#FD5353',
-    borderRadius: '15px',
-    width: '15%',
+    borderRadius: '12px',
+    width: '20%',
     float: 'right',
   },
   addForm: {
@@ -49,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
   addTextField: {
     width: '350px',
     padding: '5px',
+  },
+  selectInputAdd: {
+    marginTop: '16px',
   },
 }));
 
@@ -82,107 +86,113 @@ export default function AddDebater() {
     event.preventDefault();
   };
   return (
-    <Grid item className='addDebater'>
-      <Paper className={classes.paper}>
-        <p className='addTitle'>
-          <ArrowBackIcon className={classes.backArrow} />
-          Add
-        </p>
-        <form className={classes.addForm} noValidate autoComplete='off'>
-          <Grid container>
-            <Grid item xs={6}>
-              <TextField
-                id='standard-basic'
-                label='Name'
-                className={classes.addTextField}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                id='standard-basic'
-                label='Email'
-                className={classes.addTextField}
-              />
-            </Grid>
-
-            <Grid item xs={6}>
-              <TextField
-                id='standard-basic '
-                label='Estate Number'
-                className={classes.addTextField}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                id='standard-basic'
-                label='Phone'
-                className={classes.addTextField}
-              />
-            </Grid>
-
-            <Grid item xs={6}>
-              <TextField
-                id='standard-select-currency'
-                select
-                value={currency}
-                onChange={handleChange}
-                className={classes.addTextField}
-              >
-                {currencies.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                id='standard-basic'
-                label='Address'
-                className={classes.addTextField}
-              />
-            </Grid>
-
-            <Grid item xs={6}>
-              <FormControl className={clsx(classes.margin, classes.textField)}>
-                <InputLabel htmlFor='standard-adornment-password'>
-                  Password
-                </InputLabel>
-                <Input
+    <div>
+      <Grid container className='addDebater'>
+        <Paper className={classes.paper}>
+          <p className='addTitle'>
+            <ArrowBackIcon className={classes.backArrow} />
+            Add
+          </p>
+          <form className={classes.addForm} noValidate autoComplete='off'>
+            <Grid container>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-basic'
+                  label='Name'
                   className={classes.addTextField}
-                  id='standard-adornment-password'
-                  type={values.showPassword ? 'text' : 'password'}
-                  value={values.password}
-                  onChange={handleChange('password')}
-                  endAdornment={
-                    <InputAdornment position='end'>
-                      <IconButton
-                        aria-label='toggle password visibility'
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                      >
-                        {values.showPassword ? (
-                          <Visibility />
-                        ) : (
-                          <VisibilityOff />
-                        )}
-                      </IconButton>
-                    </InputAdornment>
-                  }
                 />
-              </FormControl>
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-basic'
+                  label='Email'
+                  className={classes.addTextField}
+                />
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-basic '
+                  label='Estate Number'
+                  className={classes.addTextField}
+                />
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-basic'
+                  label='Phone'
+                  className={classes.addTextField}
+                />
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-select-currency'
+                  select
+                  value={currency}
+                  onChange={handleChange}
+                  className={clsx(classes.addTextField, classes.selectInputAdd)}
+                >
+                  {currencies.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <TextField
+                  id='standard-basic'
+                  label='Address'
+                  className={classes.addTextField}
+                />
+              </Grid>
+              <Grid item lg={6} xs={12}>
+                <FormControl
+                  className={clsx(classes.margin, classes.textField)}
+                >
+                  <InputLabel htmlFor='standard-adornment-password'>
+                    Password
+                  </InputLabel>
+                  <Input
+                    className={classes.addTextField}
+                    id='standard-adornment-password'
+                    type={values.showPassword ? 'text' : 'password'}
+                    value={values.password}
+                    onChange={handleChange('password')}
+                    endAdornment={
+                      <InputAdornment position='end'>
+                        <IconButton
+                          aria-label='toggle password visibility'
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                        >
+                          {values.showPassword ? (
+                            <Visibility />
+                          ) : (
+                            <VisibilityOff />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                  />
+                </FormControl>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                style={{ marginRight: '100px', marginTop: '20px' }}
+              >
+                <Button
+                  variant='contained'
+                  color='secondary'
+                  className={classes.AddDebaterBtn}
+                >
+                  Add
+                </Button>
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
-
-        <Button
-          variant='contained'
-          color='secondary'
-          className={classes.AddDebaterBtn}
-        >
-          Add
-        </Button>
-      </Paper>
-    </Grid>
+          </form>
+        </Paper>
+      </Grid>
+    </div>
   );
 }
