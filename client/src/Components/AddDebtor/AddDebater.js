@@ -46,7 +46,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '20px',
     paddingBottom: '50px',
   },
-  addTextField: {},
+  addTextField: {
+    width: '350px',
+    padding: '5px',
+  },
 }));
 
 const currencies = [
@@ -92,18 +95,29 @@ export default function AddDebater() {
                 id='standard-basic'
                 label='Name'
                 className={classes.addTextField}
-                fullWidth
               />
             </Grid>
             <Grid item xs={6}>
-              <TextField id='standard-basic' label='Email' />
+              <TextField
+                id='standard-basic'
+                label='Email'
+                className={classes.addTextField}
+              />
             </Grid>
 
             <Grid item xs={6}>
-              <TextField id='standard-basic' label='Estate Number' />
+              <TextField
+                id='standard-basic '
+                label='Estate Number'
+                className={classes.addTextField}
+              />
             </Grid>
             <Grid item xs={6}>
-              <TextField id='standard-basic' label='Phone' />
+              <TextField
+                id='standard-basic'
+                label='Phone'
+                className={classes.addTextField}
+              />
             </Grid>
 
             <Grid item xs={6}>
@@ -112,6 +126,7 @@ export default function AddDebater() {
                 select
                 value={currency}
                 onChange={handleChange}
+                className={classes.addTextField}
               >
                 {currencies.map((option) => (
                   <MenuItem key={option.value} value={option.value}>
@@ -121,7 +136,11 @@ export default function AddDebater() {
               </TextField>
             </Grid>
             <Grid item xs={6}>
-              <TextField id='standard-basic' label='Address' />
+              <TextField
+                id='standard-basic'
+                label='Address'
+                className={classes.addTextField}
+              />
             </Grid>
 
             <Grid item xs={6}>
@@ -130,6 +149,7 @@ export default function AddDebater() {
                   Password
                 </InputLabel>
                 <Input
+                  className={classes.addTextField}
                   id='standard-adornment-password'
                   type={values.showPassword ? 'text' : 'password'}
                   value={values.password}
@@ -150,7 +170,7 @@ export default function AddDebater() {
                     </InputAdornment>
                   }
                 />
-              </FormControl>{' '}
+              </FormControl>
             </Grid>
           </Grid>
         </form>
