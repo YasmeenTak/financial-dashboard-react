@@ -40,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '12px',
     width: '20%',
     float: 'right',
+    marginRight: '75px',
+    marginTop: '20px',
   },
   addForm: {
     paddingLeft: '100px',
@@ -48,13 +50,22 @@ const useStyles = makeStyles((theme) => ({
   },
   addTextField: {
     width: '350px',
-    padding: '0px',
-
+    '& .MuiOutlinedInput-addForm': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'yellow',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    },
   },
+
   selectInputAdd: {
     marginTop: '16px',
-  }
-
+  },
 }));
 
 const currencies = [
@@ -101,8 +112,8 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
-                  inputProps={{style: {fontSize: 13}}} // font size of input text
-                  InputLabelProps={{style: {fontSize: 13}}} // font size of input label
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -112,6 +123,8 @@ export default function AddDebater() {
                   className={classes.addTextField}
                   name='email'
                   autoComplete='email'
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -119,13 +132,18 @@ export default function AddDebater() {
                   id='standard-basic '
                   label='Estate Number'
                   className={classes.addTextField}
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
                 <TextField
                   id='standard-basic'
                   label='Phone'
+                  name='number'
                   className={classes.addTextField}
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -148,11 +166,15 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Address'
                   className={classes.addTextField}
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
                 <FormControl
                   className={clsx(classes.margin, classes.textField)}
+                  inputProps={{ style: { fontSize: 13 } }}
+                  InputLabelProps={{ style: { fontSize: 13 } }}
                 >
                   <InputLabel htmlFor='standard-adornment-password'>
                     Password
@@ -181,11 +203,7 @@ export default function AddDebater() {
                   />
                 </FormControl>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                style={{ marginRight: '100px', marginTop: '20px' }}
-              >
+              <Grid item xs={12}>
                 <Button
                   variant='contained'
                   color='secondary'

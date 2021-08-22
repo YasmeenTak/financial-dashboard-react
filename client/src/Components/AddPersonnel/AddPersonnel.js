@@ -20,10 +20,8 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
     color: theme.palette.text.secondary,
     margin: '30px',
-    width: '85%',
     borderRadius: '15px',
   },
   backArrow: {
@@ -31,12 +29,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '10px',
     marginBottom: '-2px',
   },
-  AddDebaterBtn: {
-    color: 'white',
-    backgroundColor: '#FD5353',
-    borderRadius: '12px',
-    width: '20%',
-    float: 'right',
+
+  addForm: {
+    paddingLeft: '100px',
+    paddingTop: '20px',
+    paddingBottom: '50px',
+    // border:'1px solid red'
+  },
+  addTextField: {
+    width: '350px',
   },
   chipAddPersonal: {
     display: 'flex',
@@ -47,9 +48,20 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     border: '1px solid #E9E9F0',
     borderRadius: '10px',
+    width: '350px',
   },
   chip: {
     margin: theme.spacing(0.5),
+    height: '24px',
+  },
+  AddPersonalBtn: {
+    color: 'white',
+    backgroundColor: '#FD5353',
+    borderRadius: '12px',
+    width: '20%',
+    float: 'right',
+    marginRight: '75px',
+    marginTop: '20px',
   },
 }));
 export default function AddPersonnel() {
@@ -58,7 +70,6 @@ export default function AddPersonnel() {
     { key: 0, label: 'administration' },
     { key: 1, label: 'Banking' },
     { key: 2, label: 'Claims' },
-    { key: 3, label: 'Claims' },
   ]);
 
   const handleDelete = (chipToDelete) => () => {
@@ -77,14 +88,14 @@ export default function AddPersonnel() {
           </p>
           <form className={classes.addForm} noValidate autoComplete='off'>
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
+              <Grid item lg={6} xs={12} sm={12}>
                 <TextField
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item lg={6} xs={12} sm={12}>
                 <TextField
                   id='email'
                   label='Email'
@@ -93,15 +104,16 @@ export default function AddPersonnel() {
                   autoComplete='email'
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item lg={6} xs={12} sm={12}>
                 <TextField
                   id='filled-password-input'
                   label='Password'
                   type='password'
                   autoComplete='current-password'
+                  className={classes.addTextField}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item lg={6} xs={12} sm={12}>
                 <div component='ul' className={classes.chipAddPersonal}>
                   {chipData.map((data) => {
                     let icon;
@@ -131,7 +143,7 @@ export default function AddPersonnel() {
                 <Button
                   variant='contained'
                   color='secondary'
-                  className={classes.AddDebaterBtn}
+                  className={classes.AddPersonalBtn}
                 >
                   Add
                 </Button>
