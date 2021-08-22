@@ -1,38 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(2.6),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    borderRadius: 15,
-  },
-  image: {
-    marginRight: 400,
-  },
-  borderAdd: {
-    border: '2px dashed #FD5353',
-    borderRadius: 15,
-    padding: theme.spacing(4),
-  },
-  addBtn: {
-    fontSize: 80,
-    color: '#ED1B24',
-    textAlign: 'center',
-  },
-  addText: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    color: 'black',
-  },
-  paperRight: { padding: 25 },
-}));
+import { useStyles } from './style';
 
 export default function AddBtnTop() {
   const classes = useStyles();
