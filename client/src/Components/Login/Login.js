@@ -39,13 +39,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '60%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
     color: 'white',
-    backgroundColor: '#ed1b24',
+    backgroundColor: '#FD5353',
+    borderRadius: '10px',
+  },
+  rightForm: {
+    backgroundColor: '#F5F9FF',
   },
 }));
 
@@ -55,13 +59,25 @@ export default function Login() {
   return (
     <Grid container component='main' className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid item xs={false} sm={4} md={5} className={classes.image} />
+      <Grid
+        item
+        xs={12}
+        sm={8}
+        md={7}
+        component={Paper}
+        elevation={6}
+        square
+        className={classes.rightForm}
+      >
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography fontWeight='fontWeightLight'>
+          <Typography
+            fontWeight='fontWeightLight'
+            style={{ color: '#A6A7AD', fontSize: 'small' }}
+          >
             Welcome back! Please login to your account
           </Typography>
           <form className={classes.form} noValidate>
@@ -74,7 +90,8 @@ export default function Login() {
               label='Email Address'
               name='email'
               autoComplete='email'
-              autoFocus
+              size='small'
+              style={{ backgroundColor: 'white' }}
             />
 
             <TextField
@@ -87,6 +104,8 @@ export default function Login() {
               type='password'
               id='password'
               autoComplete='current-password'
+              size='small'
+              style={{ backgroundColor: 'white' }}
             />
             <FormControlLabel
               control={<Checkbox value='remember' color='primary' />}

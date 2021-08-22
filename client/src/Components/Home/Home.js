@@ -12,7 +12,7 @@ export default function Home() {
     <div className='home'>
       {/* <Charts /> */}
       {/* <TableNotif /> */}
-      {/* <AddDebater /> */}
+      <AddDebater />
       <AddPersonnel />
     </div>
   );

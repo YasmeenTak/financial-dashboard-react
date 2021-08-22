@@ -48,11 +48,13 @@ const useStyles = makeStyles((theme) => ({
   },
   addTextField: {
     width: '350px',
-    padding: '5px',
+    padding: '0px',
+
   },
   selectInputAdd: {
     marginTop: '16px',
-  },
+  }
+
 }));
 
 const currencies = [
@@ -99,6 +101,8 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
+                  inputProps={{style: {fontSize: 13}}} // font size of input text
+                  InputLabelProps={{style: {fontSize: 13}}} // font size of input label
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
