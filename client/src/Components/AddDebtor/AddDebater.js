@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import './style.css';
-import { makeStyles } from '@material-ui/core/styles';
+import { useStyles } from './style';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -17,67 +17,6 @@ import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-    margin: '30px',
-    borderRadius: '15px',
-  },
-  backArrow: {
-    fontSize: 'small',
-    marginRight: '10px',
-    marginBottom: '-2px',
-  },
-  AddDebaterBtn: {
-    color: 'white',
-    backgroundColor: '#FD5353',
-    borderRadius: '12px',
-    width: '20%',
-    float: 'right',
-    marginRight: '75px',
-    marginTop: '20px',
-  },
-  addForm: {
-    paddingLeft: '100px',
-    paddingTop: '20px',
-    paddingBottom: '50px',
-  },
-  addTextField: {
-    width: '350px',
-    '& .MuiOutlinedInput-addForm': {
-      '& fieldset': {
-        borderColor: 'red',
-      },
-      '&:hover fieldset': {
-        borderColor: 'yellow',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'green',
-      },
-    },
-  },
-
-  selectInputAdd: {
-    marginTop: '16px',
-  },
-}));
-
-const currencies = [
-  {
-    value: 'CP',
-    label: 'CP',
-  },
-  {
-    value: 'SA',
-    label: 'SA',
-  },
-];
 
 export default function AddDebater() {
   const classes = useStyles();
@@ -97,6 +36,17 @@ export default function AddDebater() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  const currencies = [
+    {
+      value: 'CP',
+      label: 'CP',
+    },
+    {
+      value: 'SA',
+      label: 'SA',
+    },
+  ];
   return (
     <div>
       <Grid container className='addDebater'>
