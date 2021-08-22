@@ -12,8 +12,8 @@ export default function Home() {
     <div className='home'>
       {/* <Charts /> */}
       {/* <TableNotif /> */}
-      <AddDebater />
-      <AddPersonnel />
+      {/* <AddDebater /> */}
+      {/* <AddPersonnel /> */}
     </div>
   );
 }

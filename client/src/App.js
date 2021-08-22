@@ -13,6 +13,7 @@ import AddDebater from './Components/AddDebtor/AddDebater';
 
 import Home from './Components/Home/Home';
 import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
+import PersonnelManagement from './Components/PersonnelManagement/PersonnelManagement';
 function App() {
   return (
     <Router>
@@ -21,7 +22,7 @@ function App() {
         {/* <TableNotif /> */}
         {/* <Login /> */}
         {/* <Sidedbar /> */}
-      
+
         {/* <AddDebater /> */}
         {/* <AddPersonnel /> */}
         <div className='containerr'>
@@ -37,6 +38,10 @@ function App() {
 
             <Route path='/NotificationManagement'>
               <NotificationManagement />
+            </Route>
+
+            <Route path='/PersonnelManagement'>
+              <PersonnelManagement />
             </Route>
           </Switch>
         </div>
