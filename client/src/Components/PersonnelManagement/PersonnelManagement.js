@@ -14,12 +14,35 @@ import { useStyles } from './style';
 function createData(personnel, email, groups, action) {
   return { personnel, email, groups, action };
 }
+const columns = [
+  {
+    filed: 'personnel',
+    headerName: 'PERSONNEL',
+    width: 70,
+  },
+  {
+    filed: 'email',
+    headerName: 'EMAIL',
+    width: 70,
+  }, {
+    filed: 'groups',
+    headerName: 'GROUPS',
+    width: 70,
+  }, {
+    filed: 'actiodddn',
+    headerName: 'ACTION',
+    width: 70,
+  },
+];
 
 const rows = [
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
+
+  { personnel: 'Adam', email: 'adam@gmail.com', groups: 'Jon', action: 35 },
+  { personnel: 'yas', email: 'yasmen@g.com', groups: 'Jon', action: 35 },
+  { personnel: 'Sally', email: 'sally@gmail.com', groups: 'Jon', action: 35 },
+  { personnel: 'Jeff', email: 'jeff@gmail.com', groups: 'Jon', action: 35 },
+  { personnel: 'Moataz', email: 'moataz@gmail.com', groups: 'Jon', action: 35 },
 ];
 
 export default function PersonnelManagement() {
@@ -36,7 +59,7 @@ export default function PersonnelManagement() {
               <TableCell>PERSONNEL</TableCell>
               <TableCell>EMAIL</TableCell>
               <TableCell>GROUPS</TableCell>
-              <TableCell>ACTIONS</TableCell>
+              <TableCell>ACTION</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

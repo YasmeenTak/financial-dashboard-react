@@ -14,17 +14,21 @@ import AddDebater from './Components/AddDebtor/AddDebater';
 import Home from './Components/Home/Home';
 import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
 import PersonnelManagement from './Components/PersonnelManagement/PersonnelManagement';
+import Tt from './Components/tt/tt';
+
 function App() {
   return (
     <Router>
       <div className='App'>
         <Navbar />
+        <Tt />
         {/* <TableNotif /> */}
         {/* <Login /> */}
         {/* <Sidedbar /> */}
 
         {/* <AddDebater /> */}
         {/* <AddPersonnel /> */}
+
         <div className='containerr'>
           <Sidedbar />
           <Switch>
