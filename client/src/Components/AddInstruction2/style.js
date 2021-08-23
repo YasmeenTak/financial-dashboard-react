@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
   uploadImg: {
     marginTop: '130px',
+    height: '90px',
+    backgroundColor: '#F5F6FA',
+    color: 'gray',
   },
   AddDebaterBtn: {
     color: 'white',
@@ -53,8 +56,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '12px',
     width: '20%',
     float: 'right',
-    marginRight: '75px',
-    marginTop: '20px',
+    margin: '20px 75px 20px 0',
   },
 }));
 

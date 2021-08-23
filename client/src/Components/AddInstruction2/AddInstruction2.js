@@ -39,7 +39,7 @@ export default function AddInstruction2() {
                 component='label'
                 className={classes.uploadImg}
               >
-                Upload File
+                Upload Image
                 <input type='file' hidden />
               </Button>
             </Grid>
