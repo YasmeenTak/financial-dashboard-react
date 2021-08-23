@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Sidedbar from './Components/Sidedbar/Sidedbar';
 import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
 import NotificationManagement from './Components/NotificationManagement/Notification';
+import Notification from './Components/Notification/Notification';
 import TableNotif from './Components/TableNotif/TableNotif';
 import AddDebater from './Components/AddDebtor/AddDebater';
 
@@ -15,18 +16,23 @@ import Home from './Components/Home/Home';
 import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
 import PersonnelManagement from './Components/PersonnelManagement/PersonnelManagement';
 import Tt from './Components/tt/tt';
+import AddName from './Components/AddName/AddName';
+import AddPerson from './Components/AddPerson/AddPerson';
+import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
+
 
 function App() {
   return (
     <Router>
       <div className='App'>
         <Navbar />
-        <Tt />
+        {/* <AddName /> */}
+        {/* <Tt /> */}
         {/* <TableNotif /> */}
         {/* <Login /> */}
         {/* <Sidedbar /> */}
 
-        {/* <AddDebater /> */}
+        <AddDebater />
         {/* <AddPersonnel /> */}
 
         <div className='containerr'>
@@ -47,6 +53,23 @@ function App() {
             <Route path='/PersonnelManagement'>
               <PersonnelManagement />
             </Route>
+
+            <Route path='/Notification'>
+              <Notification />
+            </Route>
+
+            <Route path='/AddName'>
+              <AddName />
+            </Route>
+
+            <Route path='/AddPerson'>
+              <AddPerson />
+            </Route>
+
+            <Route path='/AddInstruction2'>
+              <AddInstruction2 />
+            </Route>
+
           </Switch>
         </div>
       </div>

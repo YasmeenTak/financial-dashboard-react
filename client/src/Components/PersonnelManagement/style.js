@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   personnelManagement: {
     flex: 4,
-    padding: theme.spacing(3),
     backgroundColor: '#f5f9ff',
   },
   paper: {

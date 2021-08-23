@@ -1,8 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  personnelManagement: {
-    marginBottom: 30,
+  addBtnTop: {
+    margin: 30,
   },
   paper: {
     padding: theme.spacing(2.6),
