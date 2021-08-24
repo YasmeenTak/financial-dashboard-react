@@ -22,6 +22,7 @@ import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
 import AddLink from './Components/AddLink/AddLink';
 import AddAdmin from './Components/AddAdmin/AddAdmin';
 import Instruction from './Components/Instruction/Instruction';
+import EditNotification from './Components/EditNotification/EditNotification';
 
 function App() {
   return (
@@ -90,6 +91,10 @@ function App() {
 
             <Route path='/AddPerson'>
               <AddPerson />
+            </Route>
+
+            <Route path='/EditNotification'>
+              <EditNotification />
             </Route>
           </Switch>
         </div>

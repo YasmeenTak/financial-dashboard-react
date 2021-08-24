@@ -23,7 +23,7 @@ export default function AddDebater() {
   const [currency, setCurrency] = React.useState('CP');
   const [values, setValues] = React.useState({
     password: '',
-  });
+  });  
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
