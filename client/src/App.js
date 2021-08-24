@@ -19,7 +19,7 @@ import Tt from './Components/tt/tt';
 import AddName from './Components/AddName/AddName';
 import AddPerson from './Components/AddPerson/AddPerson';
 import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
-
+import AddLink from './Components/AddLink/AddLink';
 
 function App() {
   return (
@@ -32,8 +32,8 @@ function App() {
         {/* <Login /> */}
         {/* <Sidedbar /> */}
 
-        <AddDebater />
-        <AddPersonnel />
+        {/* <AddDebater /> */}
+        {/* <AddPersonnel /> */}
 
         <div className='containerr'>
           <Sidedbar />
@@ -70,6 +70,9 @@ function App() {
               <AddInstruction2 />
             </Route>
 
+            <Route path='/AddLink'>
+              <AddLink />
+            </Route>
           </Switch>
         </div>
       </div>
