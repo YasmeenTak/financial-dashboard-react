@@ -17,14 +17,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '-2px',
   },
 
-  addTitle: {
-    textAlign: 'left',
-    marginBottom: '20px',
-    marginTop: '-5px',
-    fontWeight: 'bold',
-    color: '#2c3758',
-  },
-
   addForm: {
     paddingLeft: '100px',
     paddingTop: '20px',
@@ -51,16 +43,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     width: '350px',
   },
-
+  chip: {
+    margin: theme.spacing(0.5),
+    height: '24px',
+  },
   AddPersonalBtn: {
     color: 'white',
     backgroundColor: '#FD5353',
     borderRadius: '12px',
     width: '20%',
     float: 'right',
-    // marginRight: '75px',
-    // marginTop: '20px',
-    margin: '30px 100px 50px 0',
+    marginRight: '75px',
+    marginTop: '20px',
   },
 }));
 

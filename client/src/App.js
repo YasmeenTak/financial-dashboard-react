@@ -20,6 +20,7 @@ import AddName from './Components/AddName/AddName';
 import AddPerson from './Components/AddPerson/AddPerson';
 import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
 import AddLink from './Components/AddLink/AddLink';
+import AddAdmin from './Components/AddAdmin/AddAdmin';
 import Instruction from './Components/Instruction/Instruction';
 
 function App() {
@@ -77,6 +78,18 @@ function App() {
 
             <Route path='/Instruction'>
               <Instruction />
+            </Route>
+
+            <Route path='/AddAdmin'>
+              <AddAdmin />
+            </Route>
+
+            <Route path='/AddPersonnel'>
+              <AddPersonnel />
+            </Route>
+
+            <Route path='/AddPerson'>
+              <AddPerson />
             </Route>
           </Switch>
         </div>

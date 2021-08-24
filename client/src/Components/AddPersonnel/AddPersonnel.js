@@ -1,75 +1,14 @@
 import React from 'react';
 import './style.css';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import TagFacesIcon from '@material-ui/icons/TagFaces';
-
+import { useStyles } from './style';
 import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(2),
-  },
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-    margin: '30px',
-    borderRadius: '15px',
-  },
-  backArrow: {
-    fontSize: 'small',
-    marginRight: '10px',
-    marginBottom: '-2px',
-  },
-
-  addForm: {
-    paddingLeft: '100px',
-    paddingTop: '20px',
-    paddingBottom: '50px',
-    // border:'1px solid red'
-  },
-  addTextField: {
-    width: '350px',
-    '& .MuiInputBase-input': {
-      fontSize: 13,
-    },
-    '& .MuiInputLabel-formControl': {
-      fontSize: 13,
-    },
-  },
-  chipAddPersonal: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    listStyle: 'none',
-    padding: theme.spacing(0.5),
-    margin: 0,
-    border: '1px solid #E9E9F0',
-    borderRadius: '10px',
-    width: '350px',
-  },
-  chip: {
-    margin: theme.spacing(0.5),
-    height: '24px',
-  },
-  AddPersonalBtn: {
-    color: 'white',
-    backgroundColor: '#FD5353',
-    borderRadius: '12px',
-    width: '20%',
-    float: 'right',
-    marginRight: '75px',
-    marginTop: '20px',
-  },
-}));
 export default function AddPersonnel() {
   const classes = useStyles();
   const [chipData, setChipData] = React.useState([
