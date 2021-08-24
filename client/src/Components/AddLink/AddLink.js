@@ -12,8 +12,7 @@ export default function AddLink() {
       <Grid container>
         <Paper className={classes.paper}>
           <p className={classes.addTitle}>
-            <ArrowBackIcon className={classes.backArrow} />
-            Add Link
+            <ArrowBackIcon className={classes.backArrow} /> Add
           </p>
           <form className={classes.addForm} noValidate autoComplete='off'>
             <Grid container>

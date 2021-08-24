@@ -313,7 +313,7 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 // ---
 
 const sample = [
-  ['John Smith', 'CP', 6.0, 24, 4.0],
+  ['John Smith', 'CP', 6.0, 24, 4.0, 3],
   ['Ice cream sandwich', 'CP', 9.0, 37, 4.3],
   ['Eclair', 'SA', 16.0, 24, 6.0],
   ['Cupcake', 'SA', 3.7, 67, 4.3],
@@ -399,6 +399,9 @@ export default function ReactVirtualizedTable() {
                 label: 'Protein\u00A0(g)',
                 dataKey: 'proteins',
                 numeric: true,
+                renderCell: (params) => {
+                  return <div>Hii</div>;
+                },
               },
             ]}
           />
