@@ -32,16 +32,11 @@ const useStyles = makeStyles((theme) => ({
   },
   addTextField: {
     width: '350px',
-    '& .MuiOutlinedInput-addForm': {
-      '& fieldset': {
-        borderColor: 'red',
-      },
-      '&:hover fieldset': {
-        borderColor: 'yellow',
-      },
-      '& .Mui-focused fieldset': {
-        borderColor: 'green',
-      },
+    '& .MuiInputBase-input': {
+      fontSize: 13,
+    },
+    '& .MuiInputLabel-formControl': {
+      fontSize: 13,
     },
   },
 

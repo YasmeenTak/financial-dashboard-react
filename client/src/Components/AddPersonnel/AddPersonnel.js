@@ -38,6 +38,12 @@ const useStyles = makeStyles((theme) => ({
   },
   addTextField: {
     width: '350px',
+    '& .MuiInputBase-input': {
+      fontSize: 13,
+    },
+    '& .MuiInputLabel-formControl': {
+      fontSize: 13,
+    },
   },
   chipAddPersonal: {
     display: 'flex',

@@ -33,7 +33,7 @@ function App() {
         {/* <Sidedbar /> */}
 
         <AddDebater />
-        {/* <AddPersonnel /> */}
+        <AddPersonnel />
 
         <div className='containerr'>
           <Sidedbar />

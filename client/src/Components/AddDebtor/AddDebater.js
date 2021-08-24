@@ -62,8 +62,6 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -73,8 +71,6 @@ export default function AddDebater() {
                   className={classes.addTextField}
                   name='email'
                   autoComplete='email'
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -82,8 +78,6 @@ export default function AddDebater() {
                   id='standard-basic '
                   label='Estate Number'
                   className={classes.addTextField}
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -92,8 +86,6 @@ export default function AddDebater() {
                   label='Phone'
                   name='number'
                   className={classes.addTextField}
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -116,17 +108,16 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Address'
                   className={classes.addTextField}
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
                 <FormControl
                   className={clsx(classes.margin, classes.textField)}
-                  inputProps={{ style: { fontSize: 13 } }}
-                  InputLabelProps={{ style: { fontSize: 13 } }}
                 >
-                  <InputLabel htmlFor='standard-adornment-password'>
+                  <InputLabel
+                    htmlFor='standard-adornment-password'
+                    style={{ fontSize: 13 }}
+                  >
                     Password
                   </InputLabel>
                   <Input
