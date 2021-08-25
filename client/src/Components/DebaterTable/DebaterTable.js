@@ -8,6 +8,13 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { useStyles } from './style';
 import Grid from '@material-ui/core/Grid';
+import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
+import BackupIcon from '@material-ui/icons/Backup';
+import { Button } from '@material-ui/core';
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Switch from '@material-ui/core/Switch';
+
 function createData(
   debtorName,
   estateNumber,
@@ -33,11 +40,11 @@ function createData(
 }
 
 const rows = [
-  createData('Yasmeen', 'CP', 6.0, 24, 4.0),
-  createData('Adam', 'SA', 9.0, 37, 4.3),
-  createData('Ahmed', 'SA', 16.0, 24, 6.0),
-  createData('John', 'CP', 3.7, 67, 4.3),
-  createData('Susan', 'SA', 16.0, 49, 3.9),
+  createData('Yasmeen', 'CP', 6.0, 522524789, 'yasmeen@gmail.com'),
+  createData('Adam', 'SA', 9.0, 597711518, 'yasmeen@gmail.com'),
+  createData('Ahmed', 'SA', 16.0, 522524789, 'yasmeen@gmail.com'),
+  createData('John', 'CP', 3.7, 597711518, 'yasmeen@gmail.com'),
+  createData('Susan', 'SA', 16.0, 522524789, 'yasmeen@gmail.com'),
 ];
 
 export default function BasicTable() {
@@ -70,13 +77,53 @@ export default function BasicTable() {
                       {row.debtorName}
                     </TableCell>
                     <TableCell align='center'>{row.estateNumber}</TableCell>
-                    <TableCell align='center'>{row.type}</TableCell>
+                    <TableCell align='center'>
+                      <ResponsiblePersonCol />
+                    </TableCell>
                     <TableCell align='center'>{row.phone}</TableCell>
                     <TableCell align='center'>{row.email}</TableCell>
-                    <TableCell align='center'>{row.paymentSchedule}</TableCell>
-                    <TableCell align='center'>{row.preAuthSchedule}</TableCell>
-                    <TableCell align='center'>{row.redAlert}</TableCell>
-                    <TableCell align='center'>{row.action}</TableCell>
+                    <TableCell align='center'>
+                      <a href='#' style={{ color: '#7686F0' }}>
+                        Schedule
+                      </a>
+                      <BackupIcon
+                        className={classes.uploadIcon}
+                        fontSize='small'
+                      />
+                    </TableCell>
+                    <TableCell align='center'>
+                      <a href='#' style={{ color: '#7686F0' }}>
+                        Schedule
+                      </a>
+                      <BackupIcon
+                        className={classes.uploadIcon}
+                        fontSize='small'
+                      />
+                    </TableCell>
+                    <TableCell align='center'>
+                      <Button className={classes.redAlertBtn}>
+                        Send Red Alert
+                      </Button>
+                    </TableCell>
+                    <TableCell align='center'>
+                      <div style={{ display: 'flex' }} spacing={0}>
+                        <Button>
+                          <EditOutlinedIcon fontSize='small' />
+                        </Button>
+                        <Switch
+                          //   checked={state.checkedB}
+                          //   onChange={handleChange}
+                          className={classes.switchBtn}
+                          color='primary'
+                          name='checkedB'
+                          inputProps={{ 'aria-label': 'primary checkbox' }}
+                        />
+                        <LockOutlinedIcon
+                          fontSize='small'
+                          style={{ marginTop: 10 }}
+                        />
+                      </div>
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>

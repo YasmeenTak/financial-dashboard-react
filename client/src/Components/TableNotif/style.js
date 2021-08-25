@@ -26,16 +26,13 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTableCell-sizeSmall': {
       padding: 8,
     },
-    // ' & .MuiTableHead-root': {
-    //   padding: 100,
-    //   color: 'red',
-    // },
-
-    // '& .MuiTableCell-root': {
-    //   '& .MuiTableCell-body': {
-    //     color: 'red',
-    //   },
-    // },
+    ' & .MuiTableHead-root': {
+      '& .MuiTableCell-root': {
+        backgroundColor: '#F5F6FA',
+        color: '#A3A6B4',
+        padding: 15,
+      },
+    },
   },
 
   tableContainer: {
@@ -48,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
     display: 'inline-block',
     marginLeft: 5,
+    textTransform: 'none',
   },
   resolvedBtn: {
     fontSize: 'smaller',
@@ -56,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
     fontWeight: 'bold',
     padding: '8px',
+    textTransform: 'none',
   },
 }));
 

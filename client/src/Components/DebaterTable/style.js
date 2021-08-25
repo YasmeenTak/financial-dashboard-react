@@ -25,19 +25,33 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTableCell-sizeSmall': {
       padding: 8,
     },
-    // ' & .MuiTableHead-root': {
-    //   padding: 100,
-    //   color: 'red',
-    // },
-
-    // '& .MuiTableCell-root': {
-    //   '& .MuiTableCell-body': {
-    //     color: 'red',
-    //   },
-    // },
+    ' & .MuiTableHead-root': {
+      '& .MuiTableCell-root': {
+        backgroundColor: '#F5F6FA',
+        color: '#A3A6B4',
+        padding: 15,
+      },
+    },
   },
 
-  tableContainer: {},
+  uploadIcon: {
+    color: '#a3a6b4',
+    fontSize: '15px',
+    marginLeft: 5,
+    marginBottom: -4,
+  },
+  redAlertBtn: {
+    color: 'white',
+    backgroundColor: '#FD5353',
+    borderRadius: 20,
+    fontSize: '11px',
+    width: '100px',
+    padding: 8,
+    textTransform: 'none',
+  },
+  switchBtn: {
+    // color: '#43e695',
+  },
 }));
 
 export { useStyles };

@@ -57,7 +57,7 @@ export default function BasicTable() {
               aria-label='a dense table'
             >
               <TableHead>
-                <TableRow style={{ backgroundColor: '#F5F6FA', color: 'red' }}>
+                <TableRow>
                   <TableCell>DEBTOR NAME</TableCell>
                   <TableCell align='center'>TYPE </TableCell>
                   <TableCell align='center'>DATE RECEIVED</TableCell>
@@ -111,7 +111,7 @@ export default function BasicTable() {
                       </Grid>
                     </TableCell>
                     <TableCell align='center'>
-                      <Button className={classes.resolvedBtn}>resolved</Button>
+                      <Button className={classes.resolvedBtn}>Resolved</Button>
                     </TableCell>
                   </TableRow>
                 ))}
