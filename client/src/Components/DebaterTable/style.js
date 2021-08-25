@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f5f9ff',
   },
   paperMain: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
     color: theme.palette.text.secondary,
     margin: '30px',
     borderRadius: '15px',
@@ -14,14 +14,13 @@ const useStyles = makeStyles((theme) => ({
   },
   tableNotifiTitle: {
     textAlign: 'left',
-    marginBottom: '30px',
-    marginTop: '-5px',
     fontWeight: 'bold',
     color: '#2c3758',
+    padding: theme.spacing(1),
   },
   table: {
     minWidth: 650,
-    padding: 0,
+    margin: 0,
 
     '& .MuiTableCell-sizeSmall': {
       padding: 8,
@@ -38,25 +37,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
 
-  tableContainer: {
-    marginBottom: 15,
-  },
-  assginBtn: {
-    fontSize: 'smaller',
-    color: 'white',
-    backgroundColor: '#2C3758',
-    borderRadius: 20,
-    display: 'inline-block',
-    marginLeft: 5,
-  },
-  resolvedBtn: {
-    fontSize: 'smaller',
-    color: '#1BB4C5',
-    backgroundColor: '#C6ECF0',
-    borderRadius: 20,
-    fontWeight: 'bold',
-    padding: '8px',
-  },
+  tableContainer: {},
 }));
 
 export { useStyles };

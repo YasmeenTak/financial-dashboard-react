@@ -8,6 +8,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { useStyles } from './style';
 import Grid from '@material-ui/core/Grid';
+import { Button } from '@material-ui/core';
+import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
+import Link from '@material-ui/core/Link';
+
 function createData(
   debtorName,
   type,
@@ -29,11 +33,13 @@ function createData(
 }
 
 const rows = [
-  createData('Yasmee', 'CP', 6.0, 24, 4.0),
+  createData('Yasmeen', 'CP', 6.0, 24, 4.0),
   createData('Adam', 'SA', 9.0, 37, 4.3),
   createData('Ahmed', 'SA', 16.0, 24, 6.0),
   createData('John', 'CP', 3.7, 67, 4.3),
   createData('Susan', 'SA', 16.0, 49, 3.9),
+  createData('Yasmeen', 'CP', 6.0, 24, 4.0),
+  createData('Adam', 'SA', 9.0, 37, 4.3),
 ];
 
 export default function BasicTable() {
@@ -45,9 +51,13 @@ export default function BasicTable() {
         <Paper className={classes.paperMain}>
           <p className={classes.tableNotifiTitle}> Notifications Management</p>
           <TableContainer component={Paper} className={classes.tableContainer}>
-            <Table className={classes.table} aria-label='simple table'>
+            <Table
+              className={classes.table}
+              size='small'
+              aria-label='a dense table'
+            >
               <TableHead>
-                <TableRow style={{ backgroundColor: '#F5F6FA' }}>
+                <TableRow style={{ backgroundColor: '#F5F6FA', color: 'red' }}>
                   <TableCell>DEBTOR NAME</TableCell>
                   <TableCell align='center'>TYPE </TableCell>
                   <TableCell align='center'>DATE RECEIVED</TableCell>
@@ -60,17 +70,49 @@ export default function BasicTable() {
               <TableBody>
                 {rows.map((row) => (
                   <TableRow key={row.debtorName}>
-                    <TableCell component='th' scope='row'>
+                    <TableCell component='th' scope='row' align='center'>
                       {row.debtorName}
                     </TableCell>
                     <TableCell align='center'>{row.type}</TableCell>
-                    <TableCell align='center'>{row.dateReceived}</TableCell>
-                    <TableCell align='center'>{row.notificationType}</TableCell>
-                    <TableCell align='center'>{row.message}</TableCell>
                     <TableCell align='center'>
-                      {row.responsiblePerson}
+                      <div>
+                        <p>Aug 10, 2021 9:13:58 PM </p>
+                      </div>
                     </TableCell>
-                    <TableCell align='center'>{row.resolved}</TableCell>
+                    <TableCell align='center'>
+                      <Link
+                        component='button'
+                        variant='body2'
+                        onClick={() => {
+                          console.info("I'm a button.");
+                        }}
+                        style={{ color: 'black', textDecoration: 'underline' }}
+                      >
+                        Make a Payment
+                      </Link>
+                    </TableCell>
+                    <TableCell align='center'>
+                      <Link
+                        component='button'
+                        variant='body2'
+                        onClick={() => {
+                          console.info("I'm a button.");
+                        }}
+                      >
+                        View
+                      </Link>
+                    </TableCell>
+                    <TableCell align='justify'>
+                      <Grid container>
+                        <ResponsiblePersonCol
+                          className={classes.selectResponsible}
+                        />
+                        <Button className={classes.assginBtn}>Assign</Button>
+                      </Grid>
+                    </TableCell>
+                    <TableCell align='center'>
+                      <Button className={classes.resolvedBtn}>resolved</Button>
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
