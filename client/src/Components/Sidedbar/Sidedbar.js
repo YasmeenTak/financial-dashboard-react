@@ -26,7 +26,9 @@ export default function Sidedbar() {
               MANAGEMENT
             </li>
             <li className='sidebarListItem'>
-              <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT
+              <a href='/DebtorManagement'>
+                <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT
+              </a>
             </li>
             <li className='sidebarListItem'>
               <PersonOutlineOutlinedIcon className='sidebarIcon' /> PERSONNEL

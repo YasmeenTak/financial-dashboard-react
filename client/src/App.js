@@ -96,6 +96,10 @@ function App() {
             <Route path='/EditNotification'>
               <EditNotification />
             </Route>
+
+            <Route path='/TableNotif'>
+              <TableNotif />
+            </Route>
           </Switch>
         </div>
       </div>
