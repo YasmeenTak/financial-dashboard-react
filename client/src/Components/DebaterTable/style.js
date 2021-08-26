@@ -49,8 +49,35 @@ const useStyles = makeStyles((theme) => ({
     padding: 8,
     textTransform: 'none',
   },
+  mainEditBtn: {
+    borderRadius: '20%',
+    '&:hover': {
+      background: '#e0e0e0',
+    },
+  },
+  editBtn: {
+    fontSize: '20px',
+  },
   switchBtn: {
+    marginTop: '4px',
     // color: '#43e695',
+    // '& .MuiSwitch-colorSecondary': {
+    //   '& .Mui-checked': {
+    //     color: '#43e695',
+    //     border: '1px solid black',
+    //   },
+    // },
+
+    '& .MuiSwitch-thumb': { color: '#43e695' },
+    '& .MuiSwitch-colorSecondary': {
+      '& .Mui-checked + & .MuiSwitch-track': {
+        backgroundColor: '#43e695',
+      },
+    },
+  },
+  lockBtn: {
+    marginTop: '7.8px',
+    fontSize: '15px',
   },
 }));
 

@@ -14,6 +14,7 @@ import { Button } from '@material-ui/core';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Switch from '@material-ui/core/Switch';
+import { BiEditAlt } from 'react-icons/bi';
 
 function createData(
   debtorName,
@@ -107,20 +108,23 @@ export default function BasicTable() {
                     </TableCell>
                     <TableCell align='center'>
                       <div style={{ display: 'flex' }} spacing={0}>
-                        <Button>
-                          <EditOutlinedIcon fontSize='small' />
+                        <Button
+                          style={{ minWidth: 20 }}
+                          className={classes.mainEditBtn}
+                        >
+                          <BiEditAlt className={classes.editBtn} />
                         </Button>
+
                         <Switch
+                          className={classes.switchBtn}
                           //   checked={state.checkedB}
                           //   onChange={handleChange}
-                          className={classes.switchBtn}
-                          color='primary'
-                          name='checkedB'
-                          inputProps={{ 'aria-label': 'primary checkbox' }}
+                          // name='checkedA'
+                          size='small'
                         />
                         <LockOutlinedIcon
+                          className={classes.lockBtn}
                           fontSize='small'
-                          style={{ marginTop: 10 }}
                         />
                       </div>
                     </TableCell>
