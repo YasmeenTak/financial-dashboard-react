@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     fontWeight: 'bold',
     color: '#2c3758',
-    paddingLeft:'15px'
+    paddingLeft: '15px',
   },
   table: {
     minWidth: 650,
@@ -74,7 +74,42 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '7.8px',
     fontSize: '15px',
   },
-  
+  switchDiv: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+  },
+  checkbox: {
+    position: 'relative',
+    cursor: 'pointer',
+    appearance: 'none',
+    width: '80px',
+    height: '40px',
+    borderRadius: '20px',
+    border: '2px solid #ccc',
+    outline: 'none',
+    transition: '0.3s',
+    '&::before': {
+      content: '',
+      position: 'absolute',
+      height: '30px',
+      width: '30px',
+      borderRadius: '50%',
+      background: '#ccc',
+      top: '3px',
+      left: '4px',
+      transition: '0.3s ease-in-out',
+    },
+  },
+
+  // .checkbox:checked::before{
+  //   transform:translateX(37px),
+  //   background:#3399ff,
+  // }
+  // .checkbox:checked{
+  //   border-color:#3399ff,
+  // }
 }));
 
 export { useStyles };

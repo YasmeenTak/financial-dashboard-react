@@ -15,6 +15,7 @@ import { Button } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
+import SwitchTable from '../switchTable/switchTable';
 
 function createData(
   debtorName,
@@ -126,6 +127,10 @@ export default function BasicTable() {
                           className={classes.lockBtn}
                           fontSize='small'
                         />
+                        {/* <div className='switchDiv'>
+                          <input type='checkbox' className='checkbox' />
+                        </div> */}
+                        <SwitchTable />
                       </div>
                     </TableCell>
                   </TableRow>

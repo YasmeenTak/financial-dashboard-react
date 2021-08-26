@@ -37,7 +37,6 @@ function App() {
 
         {/* <AddDebater /> */}
         {/* <AddPersonnel /> */}
-
         <div className='containerr'>
           <Sidedbar />
           <Switch>
