@@ -5,14 +5,6 @@ const useStyles = makeStyles((theme) => ({
     flex: 4,
     backgroundColor: '#f5f9ff',
   },
-
-  paper: {
-    padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
-    margin: '30px',
-    borderRadius: '15px',
-    width: '100%',
-  },
 }));
 
 export { useStyles };

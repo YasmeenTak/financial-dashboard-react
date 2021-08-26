@@ -1,7 +1,7 @@
 import React from 'react';
 import AddBtnTop from '../AddBtnTop/AddBtnTop';
 import { useStyles } from './style';
-import  DebaterTable  from '../DebaterTable/DebaterTable';
+import  DebaterTable  from '../DebtorsTable/DebtorsTable';
 export default function DebtorManagement() {
   const classes = useStyles();
 

@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   chipAddPersonal: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     flexWrap: 'wrap',
     listStyle: 'none',
     padding: theme.spacing(0.5),

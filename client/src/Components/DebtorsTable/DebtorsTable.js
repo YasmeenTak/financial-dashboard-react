@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 import BackupIcon from '@material-ui/icons/Backup';
 import { Button } from '@material-ui/core';
-import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+// import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
@@ -55,7 +55,7 @@ export default function BasicTable() {
     <div className={classes.root}>
       <Grid container>
         <Paper className={classes.paperMain}>
-          <p className={classes.tableNotifiTitle}> Debaters</p>
+          <p className={classes.tableNotifiTitle}>Debtors</p>
           <TableContainer component={Paper} className={classes.tableContainer}>
             <Table className={classes.table} aria-label='simple table'>
               <TableHead>

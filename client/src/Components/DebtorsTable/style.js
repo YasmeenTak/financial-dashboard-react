@@ -1,12 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flex: 4,
-    backgroundColor: '#f5f9ff',
-  },
   paperMain: {
-    padding: theme.spacing(0),
     color: theme.palette.text.secondary,
     margin: '30px',
     borderRadius: '15px',
@@ -16,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     fontWeight: 'bold',
     color: '#2c3758',
-    padding: theme.spacing(1),
+    paddingLeft:'15px'
   },
   table: {
     minWidth: 650,
@@ -79,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '7.8px',
     fontSize: '15px',
   },
+  
 }));
 
 export { useStyles };

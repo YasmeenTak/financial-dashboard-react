@@ -11,6 +11,7 @@ import GroupWorkOutlinedIcon from '@material-ui/icons/GroupWorkOutlined';
 import LinkOutlinedIcon from '@material-ui/icons/LinkOutlined';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
+import { Link } from 'react-router-dom';
 
 export default function Sidedbar() {
   return (
@@ -21,19 +22,26 @@ export default function Sidedbar() {
             <li className='sidebarListItem'>
               <PieChartOutlinedIcon className='sidebarIcon' /> CHARTS
             </li>
-            <li className='sidebarListItem'>
-              <NotificationsNoneIcon className='sidebarIcon' /> NOTIFICATIONS
-              MANAGEMENT
-            </li>
-            <li className='sidebarListItem'>
-              <a href='/DebtorManagement'>
+            <Link
+              to='/NotificationManagement'
+              style={{ textDecoration: 'none' }}
+            >
+              <li className='sidebarListItem'>
+                <NotificationsNoneIcon className='sidebarIcon' /> NOTIFICATIONS
+                MANAGEMENT
+              </li>
+            </Link>
+            <Link to='/DebtorManagement' style={{ textDecoration: 'none' }}>
+              <li className='sidebarListItem'>
                 <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT
-              </a>
-            </li>
-            <li className='sidebarListItem'>
-              <PersonOutlineOutlinedIcon className='sidebarIcon' /> PERSONNEL
-              MANAGEMENT
-            </li>
+              </li>
+            </Link>
+            <Link to='/PersonnelManagement' style={{ textDecoration: 'none' }}>
+              <li className='sidebarListItem'>
+                <PersonOutlineOutlinedIcon className='sidebarIcon' /> PERSONNEL
+                MANAGEMENT
+              </li>
+            </Link>
             <li className='sidebarListItem'>
               <SettingsOutlinedIcon className='sidebarIcon' /> SETTINGS
             </li>
