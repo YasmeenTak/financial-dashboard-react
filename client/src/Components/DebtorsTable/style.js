@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#a3a6b4',
     fontSize: '15px',
     marginLeft: 5,
-    marginBottom: -4,
+    marginTop: 3,
   },
   redAlertBtn: {
     color: 'white',

@@ -14,6 +14,7 @@ import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
 import Chip from '@material-ui/core/Chip';
 import TagFacesIcon from '@material-ui/icons/TagFaces';
+import SwitchTable from '../switchTable/switchTable';
 function createData(personnel, email, groups, action) {
   return { personnel, email, groups, action };
 }
@@ -113,6 +114,8 @@ export default function TablePersonnelManagement() {
                           // name='checkedA'
                           size='small'
                         />
+                        <SwitchTable />
+
                         <LockOutlinedIcon
                           className={classes.lockBtn}
                           fontSize='small'

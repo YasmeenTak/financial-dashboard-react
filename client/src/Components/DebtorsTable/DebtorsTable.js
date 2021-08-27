@@ -85,22 +85,26 @@ export default function BasicTable() {
                     <TableCell align='center'>{row.phone}</TableCell>
                     <TableCell align='center'>{row.email}</TableCell>
                     <TableCell align='center'>
-                      <a href='#' style={{ color: '#7686F0' }}>
-                        Schedule
-                      </a>
-                      <BackupIcon
-                        className={classes.uploadIcon}
-                        fontSize='small'
-                      />
+                      <div style={{ display: 'flex' }}>
+                        <a href='#' style={{ color: '#7686F0' }}>
+                          Schedule
+                        </a>
+                        <BackupIcon
+                          className={classes.uploadIcon}
+                          fontSize='small'
+                        />
+                      </div>
                     </TableCell>
                     <TableCell align='center'>
-                      <a href='#' style={{ color: '#7686F0' }}>
-                        Schedule
-                      </a>
-                      <BackupIcon
-                        className={classes.uploadIcon}
-                        fontSize='small'
-                      />
+                      <div style={{ display: 'flex' }}>
+                        <a href='#' style={{ color: '#7686F0' }}>
+                          Schedule
+                        </a>
+                        <BackupIcon
+                          className={classes.uploadIcon}
+                          fontSize='small'
+                        />
+                      </div>
                     </TableCell>
                     <TableCell align='center'>
                       <Button className={classes.redAlertBtn}>

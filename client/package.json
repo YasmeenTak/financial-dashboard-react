@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/react-router-dom": "^5.1.8",
+    "bootstrap": "^5.1.0",
     "faker": "^5.5.3",
     "material-table": "^1.69.3",
     "react": "^17.0.2",
