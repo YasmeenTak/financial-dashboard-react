@@ -15,16 +15,19 @@ const useStyles = makeStyles((theme) => ({
   },
   table: {
     minWidth: 650,
-    margin: 0,
+    marginBottom: 60,
 
-    '& .MuiTableCell-sizeSmall': {
-      padding: 8,
+    '& .MuiTableBody-root': {
+      '& .MuiTableCell-root': {
+        padding: 5,
+      },
     },
+
     ' & .MuiTableHead-root': {
       '& .MuiTableCell-root': {
         backgroundColor: '#F5F6FA',
         color: '#A3A6B4',
-        padding: 15,
+        padding: 10,
       },
     },
   },
@@ -37,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mainEditBtn: {
+    minWidth: 20,
     borderRadius: '20%',
     '&:hover': {
       background: '#e0e0e0',
@@ -47,9 +51,14 @@ const useStyles = makeStyles((theme) => ({
     color: '#1D9BF0',
   },
 
-  lockBtn: {
-    marginTop: '7.8px',
-    fontSize: '15px',
+  deleteBtn: {},
+
+  mainDeleteBtn: {
+    minWidth: 20,
+    borderRadius: '20%',
+    '&:hover': {
+      background: '#e0e0e0',
+    },
   },
 }));
 

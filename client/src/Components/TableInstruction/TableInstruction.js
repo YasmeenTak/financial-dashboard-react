@@ -37,7 +37,7 @@ export default function BasicTable() {
                   <TableCell align='center'> ACTION</TableCell>
                 </TableRow>
               </TableHead>
-              <TableBody>
+              <TableBody spacing={5}>
                 {rows.map((row) => (
                   <TableRow key={row.title}>
                     <TableCell component='th' scope='row' align='center'>
@@ -47,20 +47,16 @@ export default function BasicTable() {
                       <div
                         style={{
                           display: 'flex',
-                          justifyContent: 'space-around',
+                          justifyContent: 'space-evenly',
                         }}
                       >
-                        <Button
-                          style={{ minWidth: 20 }}
-                          className={classes.mainEditBtn}
-                        >
+                        <Button className={classes.mainEditBtn}>
                           <BiEditAlt className={classes.editBtn} />
                         </Button>
 
-                        <Button>
-                          {' '}
+                        <Button className={classes.mainDeleteBtn}>
                           <DeleteOutlineOutlinedIcon
-                            className={classes.lockBtn}
+                            className={classes.deleteBtn}
                             fontSize='small'
                           />
                         </Button>
