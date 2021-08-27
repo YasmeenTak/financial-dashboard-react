@@ -62,10 +62,12 @@ export default function Sidedbar() {
                 <LinkOutlinedIcon className='sidebarIcon' />
                 LINKS
               </li>
-              <li className='sidebarSubListItem'>
-                <SettingsIcon className='sidebarIcon' />
-                INSTRUCTIONS
-              </li>
+              <Link to='/Instruction' style={{ textDecoration: 'none' }}>
+                <li className='sidebarSubListItem'>
+                  <SettingsIcon className='sidebarIcon' />
+                  INSTRUCTIONS
+                </li>
+              </Link>
             </ul>
             <li className='sidebarListItem'>
               <ArchiveOutlinedIcon className='sidebarIcon' /> ARCHIVE
