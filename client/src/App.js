@@ -23,6 +23,9 @@ import AddLink from './Components/AddLink/AddLink';
 import AddAdmin from './Components/AddAdmin/AddAdmin';
 import Instruction from './Components/Instruction/Instruction';
 import EditNotification from './Components/EditNotification/EditNotification';
+import Charts from './Components/Charts/Charts';
+import Drawer from './Components/Drawer/Drawer';
+import Admins from './Components/AdminsPage/Admins';
 
 function App() {
   return (
@@ -37,6 +40,7 @@ function App() {
 
         {/* <AddDebater /> */}
         {/* <AddPersonnel /> */}
+        {/* <Drawer /> */}
         <div className='containerr'>
           <Sidedbar />
           <Switch>
@@ -44,6 +48,12 @@ function App() {
               <Home />
             </Route>
 
+            <Route exact path='/Charts'>
+              <Charts />
+            </Route>
+            <Route exact path='/Admins'>
+              <Admins />
+            </Route>
             <Route path='/DebtorManagement'>
               <DebtorManagement />
             </Route>

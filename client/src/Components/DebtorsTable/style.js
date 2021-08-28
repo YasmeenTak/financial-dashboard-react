@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
   },
   table: {
     minWidth: 650,
-    margin: 0,
 
     '& .MuiTableCell-sizeSmall': {
       padding: 8,

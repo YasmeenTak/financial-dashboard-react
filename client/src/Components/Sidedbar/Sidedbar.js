@@ -19,9 +19,12 @@ export default function Sidedbar() {
       <div className='sidebarWapper'>
         <div className='sidebarMenu'>
           <ul className='sidebarList'>
-            <li className='sidebarListItem'>
-              <PieChartOutlinedIcon className='sidebarIcon' /> CHARTS
-            </li>
+            <Link to='/Charts' style={{ textDecoration: 'none' }}>
+              <li className='sidebarListItem'>
+                <PieChartOutlinedIcon className='sidebarIcon' /> CHARTS
+              </li>{' '}
+            </Link>
+
             <Link
               to='/NotificationManagement'
               style={{ textDecoration: 'none' }}
@@ -46,10 +49,13 @@ export default function Sidedbar() {
               <SettingsOutlinedIcon className='sidebarIcon' /> SETTINGS
             </li>
             <ul>
-              <li className='sidebarSubListItem'>
-                <PeopleAltOutlinedIcon className='sidebarIcon' />
-                ADMINS
-              </li>
+              <Link to='/Admins' style={{ textDecoration: 'none' }}>
+                <li className='sidebarSubListItem'>
+                  <PeopleAltOutlinedIcon className='sidebarIcon' />
+                  ADMINS
+                </li>
+              </Link>
+
               <li className='sidebarSubListItem'>
                 <NotificationsNoneIcon className='sidebarIcon' />
                 NOTIFICATIONS

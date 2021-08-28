@@ -134,7 +134,7 @@ export default function BasicTable() {
                         {/* <div className='switchDiv'>
                           <input type='checkbox' className='checkbox' />
                         </div> */}
-                        <SwitchTable />
+                        {/* <SwitchTable /> */}
                       </div>
                     </TableCell>
                   </TableRow>
