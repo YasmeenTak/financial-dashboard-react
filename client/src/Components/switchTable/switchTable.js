@@ -86,14 +86,13 @@
 
 import React from 'react';
 import './style.css';
-
 export default function switchTable() {
   return (
     <div>
-      <label class='switch'>
-        <input type='checkbox' checked />
-        <span class='slider round'></span>
-      </label>
+      <div class='toggle-checkbox-wrapper'>
+        <input class='toggle-checkbox' type='checkbox' id='toggle' />
+        <label class='slider' for='toggle'></label>
+      </div>
     </div>
   );
 }

@@ -107,13 +107,13 @@ export default function TablePersonnelManagement() {
                           <BiEditAlt className={classes.editBtn} />
                         </Button>
 
-                        <Switch
+                        {/* <Switch
                           className={classes.switchBtn}
                           //   checked={state.checkedB}
                           //   onChange={handleChange}
                           // name='checkedA'
                           size='small'
-                        />
+                        /> */}
                         <SwitchTable />
 
                         <LockOutlinedIcon
