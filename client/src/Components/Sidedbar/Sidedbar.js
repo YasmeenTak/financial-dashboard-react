@@ -61,11 +61,13 @@ export default function Sidedbar() {
                   NOTIFICATIONS
                 </li>
               </Link>
+              <Link to='/Groups' style={{ textDecoration: 'none' }}>
+                <li className='sidebarSubListItem'>
+                  <GroupWorkOutlinedIcon className='sidebarIcon' />
+                  GROUPS
+                </li>
+              </Link>
 
-              <li className='sidebarSubListItem'>
-                <GroupWorkOutlinedIcon className='sidebarIcon' />
-                GROUPS
-              </li>
               <li className='sidebarSubListItem'>
                 <LinkOutlinedIcon className='sidebarIcon' />
                 LINKS

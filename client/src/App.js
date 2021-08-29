@@ -26,6 +26,7 @@ import EditNotification from './Components/EditNotification/EditNotification';
 import Charts from './Components/Charts/Charts';
 import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
+import Groups from './Components/GroupsPage/Groups';
 
 function App() {
   return (
@@ -106,8 +107,8 @@ function App() {
               <EditNotification />
             </Route>
 
-            <Route path='/TableNotif'>
-              <TableNotif />
+            <Route path='/Groups'>
+              <Groups />
             </Route>
           </Switch>
         </div>
