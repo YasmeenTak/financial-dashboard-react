@@ -55,11 +55,13 @@ export default function Sidedbar() {
                   ADMINS
                 </li>
               </Link>
+              <Link to='/Notification' style={{ textDecoration: 'none' }}>
+                <li className='sidebarSubListItem'>
+                  <NotificationsNoneIcon className='sidebarIcon' />
+                  NOTIFICATIONS
+                </li>
+              </Link>
 
-              <li className='sidebarSubListItem'>
-                <NotificationsNoneIcon className='sidebarIcon' />
-                NOTIFICATIONS
-              </li>
               <li className='sidebarSubListItem'>
                 <GroupWorkOutlinedIcon className='sidebarIcon' />
                 GROUPS

@@ -15,6 +15,7 @@ import { BiEditAlt } from 'react-icons/bi';
 import Chip from '@material-ui/core/Chip';
 import TagFacesIcon from '@material-ui/icons/TagFaces';
 import SwitchTable from '../switchTable/switchTable';
+
 function createData(personnel, email, groups, action) {
   return { personnel, email, groups, action };
 }
