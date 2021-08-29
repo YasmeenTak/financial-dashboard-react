@@ -67,11 +67,13 @@ export default function Sidedbar() {
                   GROUPS
                 </li>
               </Link>
+              <Link to='/Links' style={{ textDecoration: 'none' }}>
+                <li className='sidebarSubListItem'>
+                  <LinkOutlinedIcon className='sidebarIcon' />
+                  LINKS
+                </li>
+              </Link>
 
-              <li className='sidebarSubListItem'>
-                <LinkOutlinedIcon className='sidebarIcon' />
-                LINKS
-              </li>
               <Link to='/Instruction' style={{ textDecoration: 'none' }}>
                 <li className='sidebarSubListItem'>
                   <SettingsIcon className='sidebarIcon' />
@@ -79,9 +81,11 @@ export default function Sidedbar() {
                 </li>
               </Link>
             </ul>
-            <li className='sidebarListItem'>
-              <ArchiveOutlinedIcon className='sidebarIcon' /> ARCHIVE
-            </li>
+            <Link to='/Archive' style={{ textDecoration: 'none' }}>
+              <li className='sidebarListItem'>
+                <ArchiveOutlinedIcon className='sidebarIcon' /> ARCHIVE
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

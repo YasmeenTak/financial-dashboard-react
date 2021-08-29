@@ -27,7 +27,7 @@ import Charts from './Components/Charts/Charts';
 import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
 import Groups from './Components/GroupsPage/Groups';
-
+import Links from './Components/LinksPage/Links';
 function App() {
   return (
     <Router>
@@ -110,6 +110,12 @@ function App() {
             <Route path='/Groups'>
               <Groups />
             </Route>
+            <Route path='/Links'>
+              <Links />
+            </Route>
+            {/* <Route path='/Archive'>
+              <Archive />
+            </Route> */}
           </Switch>
         </div>
       </div>
