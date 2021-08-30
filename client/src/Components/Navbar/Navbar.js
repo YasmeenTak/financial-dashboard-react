@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static' color='sacndary'>
+      <AppBar position='static' color='sacndary' >
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge='start'

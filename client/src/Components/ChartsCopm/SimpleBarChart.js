@@ -52,7 +52,7 @@ export default function App() {
     <BarChart
       className='chart'
       width={500}
-      height={300}
+      height={200}
       data={data}
       margin={{
         top: 5,

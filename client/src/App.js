@@ -28,6 +28,7 @@ import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
 import Groups from './Components/GroupsPage/Groups';
 import Links from './Components/LinksPage/Links';
+import Archive from "./Components/ArchivePage/Archive";
 function App() {
   return (
     <Router>
@@ -113,9 +114,9 @@ function App() {
             <Route path='/Links'>
               <Links />
             </Route>
-            {/* <Route path='/Archive'>
+            <Route path='/Archive'>
               <Archive />
-            </Route> */}
+            </Route>
           </Switch>
         </div>
       </div>
