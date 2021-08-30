@@ -5,6 +5,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
+import InputBase from '@material-ui/core/InputBase';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import DirectionsIcon from '@material-ui/icons/Directions';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,6 +59,22 @@ const useStyles = makeStyles((theme) => ({
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
   },
+  searchRoot: {
+    padding: '1px 1px',
+    display: 'flex',
+    alignItems: 'center',
+    width: 280,
+  },
+  input: {
+    flex: 1,
+  },
+  iconButton: {
+    padding: 8,
+  },
+  divider: {
+    height: 28,
+    margin: 2,
+  },
 }));
 
 export default function VerticalTabs() {
@@ -73,6 +96,26 @@ export default function VerticalTabs() {
           aria-label='Vertical tabs example'
           className={classes.tabs}
         >
+          <div component='form' className={classes.searchRoot}>
+            <IconButton
+              type='submit'
+              className={classes.iconButton}
+              aria-label='search'
+            >
+              <SearchIcon />
+            </IconButton>
+            <Divider className={classes.divider} orientation='vertical' />
+
+            <IconButton
+              className={classes.iconButton}
+              aria-label='menu'
+            ></IconButton>
+            <InputBase
+              className={classes.input}
+              placeholder='Search Message or name'
+            />
+          </div>
+
           <Tab label='Item One' {...a11yProps(0)} />
           <Tab label='Item Two' {...a11yProps(1)} />
           <Tab label='Item Three' {...a11yProps(2)} />
