@@ -13,9 +13,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
 import { Link } from 'react-router-dom';
 
-export default function Sidedbar() {
+export default function Sidedbar({ sidebarState }) {
   return (
-    <div className='sidebar'>
+    <div className='sidebar' style={{ width: sidebarState ? '18%' : 0 }}>
       <div className='sidebarWapper'>
         <div className='sidebarMenu'>
           <ul className='sidebarList'>

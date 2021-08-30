@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -22,12 +22,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar({ onShowSidebarChange }) {
   const classes = useStyles();
+  const [showSidebar, setShowSidebar] = useState(true);
+
+  const handelShowSiderbar = () => {
+    onShowSidebarChange(showSidebar);
+  };
+  useEffect(() => {
+    handelShowSiderbar();
+  }, [showSidebar]);
 
   return (
     <div className={classes.root}>
-      <AppBar position='static' color='sacndary' >
+      <AppBar position='static' color='sacndary'>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge='start'
@@ -35,7 +43,11 @@ export default function Navbar() {
             color='inherit'
             aria-label='menu'
           >
-            <MenuIcon />
+            <MenuIcon
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+            />
           </IconButton>
           {/* <Typography variant='h6' className={classes.title}>
             admin

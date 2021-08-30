@@ -9,9 +9,8 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsIcon from '@material-ui/icons/Directions';
+import User from '../userArchive';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -117,6 +116,7 @@ export default function VerticalTabs() {
           </div>
 
           <Tab label='Item One' {...a11yProps(1)} />
+
           <Tab label='Item Two' {...a11yProps(2)} />
           <Tab label='Item Three' {...a11yProps(3)} />
           <Tab label='Item Four' {...a11yProps(4)} />
@@ -125,7 +125,7 @@ export default function VerticalTabs() {
         </Tabs>
 
         <TabPanel value={value} index={1}>
-          Item one
+          <User />
         </TabPanel>
         <TabPanel value={value} index={2}>
           Item Two

@@ -1,6 +1,6 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Login from './Components/Login/Login';
@@ -28,12 +28,17 @@ import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
 import Groups from './Components/GroupsPage/Groups';
 import Links from './Components/LinksPage/Links';
-import Archive from "./Components/ArchivePage/Archive";
+import Archive from './Components/ArchivePage/Archive';
 function App() {
+  const [sidebarState, setSidebarState] = useState();
+  const handelSidebarState = (data) => {
+    setSidebarState(data);
+  };
+
   return (
     <Router>
       <div className='App'>
-        <Navbar />
+        <Navbar onShowSidebarChange={handelSidebarState} />
         {/* <AddName /> */}
         {/* <Tt /> */}
         {/* <TableNotif /> */}
@@ -44,7 +49,7 @@ function App() {
         {/* <AddPersonnel /> */}
         {/* <Drawer /> */}
         <div className='containerr'>
-          <Sidedbar />
+          <Sidedbar sidebarState={sidebarState} />
           <Switch>
             <Route exact path='/'>
               <Home />
