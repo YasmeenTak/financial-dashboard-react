@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  toolbar: {
+    minHeight: 20,
+  },
 }));
 
 export default function Navbar() {
@@ -25,7 +28,7 @@ export default function Navbar() {
   return (
     <div className={classes.root}>
       <AppBar position='static' color='sacndary'>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             edge='start'
             className={classes.menuButton}
