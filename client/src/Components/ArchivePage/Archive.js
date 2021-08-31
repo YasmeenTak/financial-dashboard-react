@@ -1,62 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import User from '../userArchive';
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import './style.css';
 import InputBase from '@material-ui/core/InputBase';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
-import User from '../userArchive';
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role='tabpanel'
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
-  };
-}
-
 const useStyles = makeStyles((theme) => ({
-  mainDiv: { flex: 4, backgroundColor: '#f5f9ff' },
+  mainTabs: {
+    flex: 4,
+    backgroundColor: '#f5f9ff',
+  },
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
     margin: 30,
     borderRadius: 15,
-    paddingBottom: 130,
-  },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+    paddingBottom: 50,
   },
   searchRoot: {
     padding: '1px 1px',
@@ -65,36 +29,25 @@ const useStyles = makeStyles((theme) => ({
     width: 280,
   },
   input: {
+    marginLeft: theme.spacing(1),
     flex: 1,
+    fontSize: 13,
   },
   iconButton: {
-    padding: 8,
+    padding: 10,
   },
   divider: {
     height: 28,
-    margin: 2,
+    margin: 4,
   },
 }));
-
-export default function VerticalTabs() {
+export default function App() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
-    <div className={classes.mainDiv}>
-      <div className={classes.root}>
-        <Tabs
-          orientation='vertical'
-          variant='fullWidth'
-          value={value}
-          onChange={handleChange}
-          aria-label='Vertical tabs example'
-          className={classes.tabs}
-        >
+    <div className={classes.mainTabs}>
+      <Tabs className={classes.root}>
+        <TabList>
           <div component='form' className={classes.searchRoot}>
             <IconButton
               type='submit'
@@ -103,46 +56,58 @@ export default function VerticalTabs() {
             >
               <SearchIcon />
             </IconButton>
-            <Divider className={classes.divider} orientation='vertical' />
 
-            <IconButton
-              className={classes.iconButton}
-              aria-label='menu'
-            ></IconButton>
             <InputBase
               className={classes.input}
-              placeholder='Search Message or name'
+              placeholder='Search Message or Name'
             />
           </div>
+          <Tab>
+            <User />
+          </Tab>
+          <Tab>
+            <User />
+          </Tab>
+          <Tab>
+            <User />
+          </Tab>
+          <Tab>
+            <User />
+          </Tab>
+          <Tab>
+            <User />
+          </Tab>
+        </TabList>
 
-          <Tab label='Item One' {...a11yProps(1)} />
-
-          <Tab label='Item Two' {...a11yProps(2)} />
-          <Tab label='Item Three' {...a11yProps(3)} />
-          <Tab label='Item Four' {...a11yProps(4)} />
-          <Tab label='Item Five' {...a11yProps(5)} />
-          <Tab label='Item Six' {...a11yProps(6)} />
-        </Tabs>
-
-        <TabPanel value={value} index={1}>
-          <User />
+        <TabPanel>
+          <div className='panel-content'>
+            <h2>Any content 1</h2>
+          </div>
         </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Two
+        <TabPanel>
+          <div className='panel-content'>
+            <h2>Any content 2</h2>
+          </div>
         </TabPanel>
-        <TabPanel value={value} index={3}>
-          Item Three
+        <TabPanel>
+          <div className='panel-content'>
+            <h2>Any content 3</h2>
+          </div>
         </TabPanel>
-        <TabPanel value={value} index={4}>
-          Item Four
+        <TabPanel>
+          <div className='panel-content'>
+            <h2>Any content 4</h2>
+          </div>
         </TabPanel>
-        <TabPanel value={value} index={5}>
-          Item Five
+        <TabPanel>
+          <div className='panel-content'>
+            <h2>Any content 5</h2>
+          </div>
         </TabPanel>
-        <TabPanel value={value} index={6}>
-          Item Six
-        </TabPanel>
-      </div>
+      </Tabs>
     </div>
   );
 }
+
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
