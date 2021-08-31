@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import User from '../userArchive';
+import DetailsUser from '../DetailsUserArchive';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
 import './style.css';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
+
 const useStyles = makeStyles((theme) => ({
   mainTabs: {
     flex: 4,
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 30,
     borderRadius: 15,
     paddingBottom: 50,
+
   },
   searchRoot: {
     padding: '1px 1px',
@@ -81,7 +83,7 @@ export default function App() {
 
         <TabPanel>
           <div className='panel-content'>
-            <h2>Any content 1</h2>
+            <DetailsUser />
           </div>
         </TabPanel>
         <TabPanel>
