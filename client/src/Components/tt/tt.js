@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { DataGrid } from '@material-ui/data-grid';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import TagFacesIcon from '@material-ui/icons/TagFaces';
+// import { makeStyles } from '@material-ui/core/styles';
+// import Grid from '@material-ui/core/Grid';
+// import TagFacesIcon from '@material-ui/icons/TagFaces';
 import ChipTable from '../ChipTable/ChipTable';
-import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+// import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 90 },

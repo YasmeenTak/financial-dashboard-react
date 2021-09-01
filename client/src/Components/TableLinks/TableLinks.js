@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import { useStyles } from './style';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
-import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
+import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
 
 function createData(title, url, action) {
@@ -61,12 +61,13 @@ export default function BasicTable() {
                           <BiEditAlt className={classes.editBtn} />
                         </Button>
 
-                        <Button className={classes.mainDeleteBtn}>
-                          <DeleteOutlineOutlinedIcon
-                            className={classes.deleteBtn}
-                            fontSize='small'
-                          />
-                        </Button>
+                        <Switch
+                          className={classes.switchBtn}
+                          //   checked={state.checkedB}
+                          //   onChange={handleChange}
+                          // name='checkedA'
+                          size='small'
+                        />
                       </div>
                     </TableCell>
                   </TableRow>

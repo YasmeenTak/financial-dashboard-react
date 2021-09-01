@@ -10,16 +10,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#D9D9D9',
   },
 }));
-export default function DonutChart() {
+export default function Dount() {
   const classes = useStyles();
 
   return (
     <div>
       <div className='multi-graph margin'>
-        70%
+        0.0%
         <div
           className='graph'
-          style={{ '--percentage': '70', '--fill': '#ED1B24' }}
+          data-name='0'
+          style={{ '--percentage': 0, '--fill': '#ED1B24' }}
         ></div>
       </div>
       <Divider className={classes.divider} />

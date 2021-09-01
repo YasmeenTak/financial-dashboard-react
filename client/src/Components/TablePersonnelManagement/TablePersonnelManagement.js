@@ -10,7 +10,6 @@ import { useStyles } from './style';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
 import Chip from '@material-ui/core/Chip';
 import TagFacesIcon from '@material-ui/icons/TagFaces';

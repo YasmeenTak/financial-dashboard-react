@@ -41,6 +41,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '15px',
     color: '#1D9BF0',
   },
+
+  switchBtn: {
+    marginTop: '4px',
+
+    '& .MuiSwitch-thumb': { backgroundColor: '#43e695' },
+
+    '&.Mui-checked': {
+      color: '#95cc97',
+    },
+    '& .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#43E695',
+    },
+  },
 }));
 
 export { useStyles };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 //import Navbar from '../Navbar/Navbar';
 import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
@@ -14,15 +14,21 @@ import ArchiveOutlinedIcon from '@material-ui/icons/ArchiveOutlined';
 import { Link } from 'react-router-dom';
 
 export default function Sidedbar({ sidebarState }) {
+  const [item, setItem] = useState('');
+
   return (
     <div className='sidebar' style={{ width: sidebarState ? '18%' : 0 }}>
       <div className='sidebarWapper'>
         <div className='sidebarMenu'>
           <ul className='sidebarList'>
             <Link to='/Charts' style={{ textDecoration: 'none' }}>
-              <li className='sidebarListItem'>
+              <li
+                className='sidebarListItem'
+                // className={item === 'CHARTS' ? 'checked' : 'sidebarListItem'}
+                // onClick={() => setItem('CHARTS')}
+              >
                 <PieChartOutlinedIcon className='sidebarIcon' /> CHARTS
-              </li>{' '}
+              </li>
             </Link>
 
             <Link

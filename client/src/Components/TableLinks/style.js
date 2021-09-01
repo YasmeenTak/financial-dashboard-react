@@ -51,13 +51,16 @@ const useStyles = makeStyles((theme) => ({
     color: '#1D9BF0',
   },
 
-  deleteBtn: {},
+  switchBtn: {
+    marginTop: '4px',
 
-  mainDeleteBtn: {
-    minWidth: 20,
-    borderRadius: '20%',
-    '&:hover': {
-      background: '#e0e0e0',
+    '& .MuiSwitch-thumb': { backgroundColor: '#43e695' },
+
+    '&.Mui-checked': {
+      color: '#95cc97',
+    },
+    '& .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#43E695',
     },
   },
 }));

@@ -70,7 +70,12 @@ export default function App() {
       />
       <Tooltip />
       <Legend />
-      <Bar dataKey='pv' fill='#8884d8' background={{ fill: 'white' }} />
+      <Bar
+        dataKey='pv'
+        fill='#8884d8'
+        background={{ fill: 'white' }}
+        style={{ marginBottom: -50, border: '1px solid red' }}
+      />
     </BarChart>
   );
 }

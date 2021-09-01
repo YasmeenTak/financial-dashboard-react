@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import SimpleBarChart from '../ChartsCopm/SimpleBarChart';
 import DonutChart from '../ChartsCopm/DonutChart';
+import Dount from '../DountChartNew/Dount';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 
 export default function Charts() {
@@ -15,7 +16,7 @@ export default function Charts() {
     <div className={classes.root}>
       <div className={classes.charts}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6}>
             <Paper className={classes.paper}>
               <Typography
                 variant='subtitle1'
@@ -28,7 +29,7 @@ export default function Charts() {
               <SimpleBarChart />
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6}>
             <Paper className={classes.paper}>
               <div style={{ display: 'flex' }}>
                 <Typography
@@ -51,22 +52,23 @@ export default function Charts() {
                 </div>
                 <ResponsiblePersonCol />
               </div>
-              <SimpleBarChart />
+              <SimpleBarChart  />
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6}>
             <Paper className={classes.paper}>
               <Typography
                 variant='subtitle1'
                 gutterBottom
                 className={classes.titleChart}
+                style={{ marginBottom: '60px' }}
               >
                 Active notifications
               </Typography>
               <DonutChart />
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={12} lg={6}>
             <Paper className={classes.paper}>
               <div style={{ display: 'flex' }}>
                 <Typography
@@ -82,6 +84,7 @@ export default function Charts() {
                 </div>
                 <ResponsiblePersonCol />
               </div>
+              <Dount />
             </Paper>
           </Grid>
         </Grid>

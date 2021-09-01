@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 import Link from '@material-ui/core/Link';
+import Switch from '@material-ui/core/Switch';
 
 function createData(
   debtorName,

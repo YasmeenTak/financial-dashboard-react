@@ -50,9 +50,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20px',
     color: '#1D9BF0',
   },
+  switchDiv: {
+    marginLeft: 40,
+  },
 
-  deleteBtn: {},
-
+  switchBtn: {
+    marginTop: '4px',
+    '& .MuiSwitch-thumb': { backgroundColor: '#43e695' },
+    '&.Mui-checked': {
+      color: '#95cc97',
+    },
+    '& .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#43E695',
+    },
+  },
   mainDeleteBtn: {
     minWidth: 20,
     borderRadius: '20%',

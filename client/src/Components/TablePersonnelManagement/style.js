@@ -44,16 +44,10 @@ const useStyles = makeStyles((theme) => ({
   },
   editBtn: {
     fontSize: '20px',
+    color: '#1D9BF0',
   },
   switchBtn: {
     marginTop: '4px',
-    // color: '#43e695',
-    // '& .MuiSwitch-colorSecondary': {
-    //   '& .Mui-checked': {
-    //     color: '#43e695',
-    //     border: '1px solid black',
-    //   },
-    // },
 
     '& .MuiSwitch-thumb': { color: '#43e695' },
     '& .MuiSwitch-colorSecondary': {

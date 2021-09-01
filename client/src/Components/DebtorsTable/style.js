@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     margin: '30px',
     borderRadius: '15px',
-    width: '100%',
   },
   tableNotifiTitle: {
     textAlign: 'left',
@@ -51,24 +50,21 @@ const useStyles = makeStyles((theme) => ({
   },
   editBtn: {
     fontSize: '20px',
+    color: '#1D9BF0',
   },
   switchBtn: {
     marginTop: '4px',
-    // color: '#43e695',
-    // '& .MuiSwitch-colorSecondary': {
-    //   '& .Mui-checked': {
-    //     color: '#43e695',
-    //     border: '1px solid black',
-    //   },
-    // },
 
-    '& .MuiSwitch-thumb': { color: '#43e695' },
-    '& .MuiSwitch-colorSecondary': {
-      '& .Mui-checked + & .MuiSwitch-track': {
-        backgroundColor: '#43e695',
-      },
+    '& .MuiSwitch-thumb': { backgroundColor: '#43e695' },
+
+    '&.Mui-checked': {
+      color: '#95cc97',
+    },
+    '& .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#43E695',
     },
   },
+
   lockBtn: {
     marginTop: '7.8px',
     fontSize: '15px',
