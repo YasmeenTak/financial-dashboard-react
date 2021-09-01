@@ -9,13 +9,13 @@ import Sidedbar from './Components/Sidedbar/Sidedbar';
 import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
 import NotificationManagement from './Components/NotificationManagement/Notification';
 import Notification from './Components/Notification/Notification';
-import TableNotif from './Components/TableNotif/TableNotif';
-import AddDebater from './Components/AddDebtor/AddDebater';
+// import TableNotif from './Components/TableNotif/TableNotif';
+// import AddDebater from './Components/AddDebtor/AddDebater';
 
 import Home from './Components/Home/Home';
 import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
 import PersonnelManagement from './Components/PersonnelManagement/PersonnelManagement';
-import Tt from './Components/tt/tt';
+// import Tt from './Components/tt/tt';
 import AddName from './Components/AddName/AddName';
 import AddPerson from './Components/AddPerson/AddPerson';
 import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
@@ -24,7 +24,7 @@ import AddAdmin from './Components/AddAdmin/AddAdmin';
 import Instruction from './Components/Instruction/Instruction';
 import EditNotification from './Components/EditNotification/EditNotification';
 import Charts from './Components/Charts/Charts';
-import Drawer from './Components/Drawer/Drawer';
+// import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
 import Groups from './Components/GroupsPage/Groups';
 import Links from './Components/LinksPage/Links';
@@ -54,7 +54,7 @@ function App() {
           <Sidedbar sidebarState={sidebarState} />
           <Switch>
             <Route exact path='/'>
-              <Home />
+              <Charts />
             </Route>
 
             <Route exact path='/Charts'>

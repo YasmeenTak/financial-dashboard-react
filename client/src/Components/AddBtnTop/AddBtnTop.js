@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import { useStyles } from './style';
 
-export default function AddBtnTop() {
+export default function AddBtnTop({handelClick}) {
   const classes = useStyles();
 
   return (
@@ -27,6 +27,7 @@ export default function AddBtnTop() {
                 variant='subtitle2'
                 gutterBottom
                 className={classes.addText}
+                onClick={handelClick}
               >
                 Add New
               </Typography>

@@ -8,7 +8,7 @@ export default function Admins() {
 
   return (
     <div className={classes.root}>
-      <AddBtnTop />
+      <AddBtnTop handelClick={() => console.log('test2')} />
       <TableLinks />
     </div>
   );

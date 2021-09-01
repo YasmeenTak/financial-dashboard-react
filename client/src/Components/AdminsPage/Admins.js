@@ -7,7 +7,7 @@ export default function Admins() {
   const classes = useStyles();
 
   return (
-    <div  className={classes.root}>
+    <div className={classes.root}>
       <AddBtnTop />
       <TableAdmins />
     </div>

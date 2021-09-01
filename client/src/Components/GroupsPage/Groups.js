@@ -8,7 +8,7 @@ export default function Groups() {
 
   return (
     <div className={classes.root}>
-      <AddBtnTop />
+      <AddBtnTop handelClick={() => console.log('test1')} />
       <TableGroups />
     </div>
   );

@@ -23,9 +23,9 @@ export default function Sidedbar({ sidebarState }) {
           <ul className='sidebarList'>
             <Link to='/Charts' style={{ textDecoration: 'none' }}>
               <li
-                className='sidebarListItem'
-                // className={item === 'CHARTS' ? 'checked' : 'sidebarListItem'}
-                // onClick={() => setItem('CHARTS')}
+                // className='sidebarListItem'
+                className={item === 'CHARTS' ? 'checked' : 'sidebarListItem'}
+                onClick={() => setItem('CHARTS')}
               >
                 <PieChartOutlinedIcon className='sidebarIcon' /> CHARTS
               </li>
@@ -35,60 +35,108 @@ export default function Sidedbar({ sidebarState }) {
               to='/NotificationManagement'
               style={{ textDecoration: 'none' }}
             >
-              <li className='sidebarListItem'>
+              <li
+                className={
+                  item === 'MANAGEMENT' ? 'checked' : 'sidebarListItem'
+                }
+                onClick={() => setItem('MANAGEMENT')}
+              >
                 <NotificationsNoneIcon className='sidebarIcon' /> NOTIFICATIONS
                 MANAGEMENT
               </li>
             </Link>
             <Link to='/DebtorManagement' style={{ textDecoration: 'none' }}>
-              <li className='sidebarListItem'>
+              <li
+                className={
+                  item === 'DEBTOR MANAGEMENT' ? 'checked' : 'sidebarListItem'
+                }
+                onClick={() => setItem('DEBTOR MANAGEMENT')}
+              >
                 <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT
               </li>
             </Link>
             <Link to='/PersonnelManagement' style={{ textDecoration: 'none' }}>
-              <li className='sidebarListItem'>
+              <li
+                className={
+                  item === 'PERSONNEL MANAGEMENT'
+                    ? 'checked'
+                    : 'sidebarListItem'
+                }
+                onClick={() => setItem('PERSONNEL MANAGEMENT')}
+              >
                 <PersonOutlineOutlinedIcon className='sidebarIcon' /> PERSONNEL
                 MANAGEMENT
               </li>
             </Link>
-            <li className='sidebarListItem'>
+            <li
+              className={item === 'SETTINGS' ? 'checked' : 'sidebarListItem'}
+              onClick={() => setItem('SETTINGS')}
+            >
               <SettingsOutlinedIcon className='sidebarIcon' /> SETTINGS
             </li>
             <ul>
               <Link to='/Admins' style={{ textDecoration: 'none' }}>
-                <li className='sidebarSubListItem'>
+                <li
+                  className={
+                    item === 'ADMINS' ? 'checked' : 'sidebarSubListItem'
+                  }
+                  onClick={() => setItem('ADMINS')}
+                >
                   <PeopleAltOutlinedIcon className='sidebarIcon' />
                   ADMINS
                 </li>
               </Link>
               <Link to='/Notification' style={{ textDecoration: 'none' }}>
-                <li className='sidebarSubListItem'>
+                <li
+                  className={
+                    item === 'NOTIFICATIONS' ? 'checked' : 'sidebarSubListItem'
+                  }
+                  onClick={() => setItem('NOTIFICATIONS')}
+                >
                   <NotificationsNoneIcon className='sidebarIcon' />
                   NOTIFICATIONS
                 </li>
               </Link>
               <Link to='/Groups' style={{ textDecoration: 'none' }}>
-                <li className='sidebarSubListItem'>
+                <li
+                  className={
+                    item === 'GROUPS' ? 'checked' : 'sidebarSubListItem'
+                  }
+                  onClick={() => setItem('GROUPS')}
+                >
                   <GroupWorkOutlinedIcon className='sidebarIcon' />
                   GROUPS
                 </li>
               </Link>
               <Link to='/Links' style={{ textDecoration: 'none' }}>
-                <li className='sidebarSubListItem'>
+                <li
+                  className={
+                    item === 'LINKS' ? 'checked' : 'sidebarSubListItem'
+                  }
+                  onClick={() => setItem('LINKS')}
+                >
                   <LinkOutlinedIcon className='sidebarIcon' />
                   LINKS
                 </li>
               </Link>
 
               <Link to='/Instruction' style={{ textDecoration: 'none' }}>
-                <li className='sidebarSubListItem'>
+                <li
+                  className={
+                    item === 'INSTRUCTIONS' ? 'checked' : 'sidebarSubListItem'
+                  }
+                  onClick={() => setItem('INSTRUCTIONS')}
+                >
                   <SettingsIcon className='sidebarIcon' />
                   INSTRUCTIONS
                 </li>
               </Link>
             </ul>
             <Link to='/Archive' style={{ textDecoration: 'none' }}>
-              <li className='sidebarListItem'>
+              <li
+                className={item === 'ARCHIVE' ? 'checked' : 'sidebarListItem'}
+                onClick={() => setItem('ARCHIVE')}
+              >
                 <ArchiveOutlinedIcon className='sidebarIcon' /> ARCHIVE
               </li>
             </Link>
