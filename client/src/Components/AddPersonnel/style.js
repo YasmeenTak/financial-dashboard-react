@@ -56,6 +56,13 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '75px',
     marginTop: '20px',
   },
+  addTitle: {
+    textAlign: 'left',
+    marginBottom: 20,
+    marginTop: -5,
+    fontWeight: 'bold',
+    color: '#2c3758',
+  },
 }));
 
 export { useStyles };

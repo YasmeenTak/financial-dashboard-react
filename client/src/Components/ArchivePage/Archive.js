@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 30,
     borderRadius: 15,
     paddingBottom: 50,
-
   },
   searchRoot: {
     padding: '1px 1px',
@@ -88,22 +87,22 @@ export default function App() {
         </TabPanel>
         <TabPanel>
           <div className='panel-content'>
-            <h2>Any content 2</h2>
+            <DetailsUser />
           </div>
         </TabPanel>
         <TabPanel>
           <div className='panel-content'>
-            <h2>Any content 3</h2>
+            <DetailsUser />
           </div>
         </TabPanel>
         <TabPanel>
           <div className='panel-content'>
-            <h2>Any content 4</h2>
+            <DetailsUser />
           </div>
         </TabPanel>
         <TabPanel>
           <div className='panel-content'>
-            <h2>Any content 5</h2>
+            <DetailsUser />
           </div>
         </TabPanel>
       </Tabs>

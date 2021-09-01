@@ -1,7 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-
-import './style.css';
 import { useStyles } from './style';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';

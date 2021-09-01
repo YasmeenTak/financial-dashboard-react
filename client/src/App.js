@@ -38,11 +38,13 @@ function App() {
   return (
     <Router>
       <div className='App'>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
         <Navbar onShowSidebarChange={handelSidebarState} />
         {/* <AddName /> */}
         {/* <Tt /> */}
         {/* <TableNotif /> */}
-        {/* <Login /> */}
         {/* <Sidedbar /> */}
 
         {/* <AddDebater /> */}

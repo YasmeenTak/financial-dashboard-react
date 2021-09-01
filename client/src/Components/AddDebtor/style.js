@@ -43,6 +43,13 @@ const useStyles = makeStyles((theme) => ({
   selectInputAdd: {
     marginTop: '16px',
   },
+  notfiTitle: {
+    textAlign: 'left',
+    marginBottom: 20,
+    marginTop: -5,
+    fontWeight: 'bold',
+    color: '#2c3758',
+  },
 }));
 
 export { useStyles };

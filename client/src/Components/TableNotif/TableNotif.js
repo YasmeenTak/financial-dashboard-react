@@ -103,12 +103,12 @@ export default function BasicTable() {
                       </Link>
                     </TableCell>
                     <TableCell align='justify'>
-                      <Grid container>
+                      <div style={{ display: 'flex' }}>
                         <ResponsiblePersonCol
                           className={classes.selectResponsible}
                         />
                         <Button className={classes.assginBtn}>Assign</Button>
-                      </Grid>
+                      </div>
                     </TableCell>
                     <TableCell align='center'>
                       <Button className={classes.resolvedBtn}>Resolved</Button>
