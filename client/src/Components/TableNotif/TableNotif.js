@@ -12,6 +12,7 @@ import { Button } from '@material-ui/core';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 import Link from '@material-ui/core/Link';
 // import Switch from '@material-ui/core/Switch';
+import { useHistory } from 'react-router-dom';
 
 function createData(
   debtorName,
@@ -45,7 +46,12 @@ const rows = [
 
 export default function BasicTable() {
   const classes = useStyles();
+  const history = useHistory();
 
+  const routeChange = () => {
+    let path = `addToNotifManagement`;
+    history.push(path);
+  };
   return (
     <div className={classes.root}>
       <Grid container>

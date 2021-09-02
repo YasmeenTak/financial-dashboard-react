@@ -12,6 +12,7 @@ import { Button } from '@material-ui/core';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
+import { useHistory } from 'react-router-dom';
 
 function createData(ticketTitle, chartLabel, groups, action) {
   return { ticketTitle, chartLabel, groups, action };
@@ -29,7 +30,12 @@ const rows = [
 
 export default function BasicTable() {
   const classes = useStyles();
+  const history = useHistory();
 
+  const routeChange = () => {
+    let path = `editNotification`;
+    history.push(path);
+  };
   return (
     <div className={classes.root}>
       <Grid container>
@@ -69,7 +75,10 @@ export default function BasicTable() {
                           justifyContent: 'center',
                         }}
                       >
-                        <Button className={classes.mainEditBtn}>
+                        <Button
+                          className={classes.mainEditBtn}
+                          handelClick={routeChange}
+                        >
                           <BiEditAlt className={classes.editBtn} />
                         </Button>
 

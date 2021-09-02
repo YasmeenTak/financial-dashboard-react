@@ -2,9 +2,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flex: 4,
-    backgroundColor: '#f5f9ff',
+    flexGrow: 1,
   },
+
   paper: {
     padding: theme.spacing(2),
     color: theme.palette.text.secondary,
@@ -16,12 +16,19 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '10px',
     marginBottom: '-2px',
   },
-
+  AddDebaterBtn: {
+    color: 'white',
+    backgroundColor: '#FD5353',
+    borderRadius: '12px',
+    width: '20%',
+    float: 'right',
+    marginRight: '75px',
+    marginTop: '20px',
+  },
   addForm: {
     paddingLeft: '100px',
     paddingTop: '20px',
     paddingBottom: '50px',
-    // border:'1px solid red'
   },
   addTextField: {
     width: '350px',
@@ -32,31 +39,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 13,
     },
   },
-  chipAddPersonal: {
-    display: 'flex',
-    justifyContent: 'left',
-    flexWrap: 'wrap',
-    listStyle: 'none',
-    padding: theme.spacing(0.5),
-    margin: 0,
-    border: '1px solid #E9E9F0',
-    borderRadius: '10px',
-    width: '350px',
+
+  selectInputAdd: {
+    marginTop: '16px',
   },
-  chip: {
-    margin: theme.spacing(0.5),
-    height: '24px',
-  },
-  AddPersonalBtn: {
-    color: 'white',
-    backgroundColor: '#FD5353',
-    borderRadius: '12px',
-    width: '20%',
-    float: 'right',
-    marginRight: '75px',
-    marginTop: '20px',
-  },
-  addTitle: {
+  notfiTitle: {
     textAlign: 'left',
     marginBottom: 20,
     marginTop: -5,
