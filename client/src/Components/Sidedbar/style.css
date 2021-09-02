@@ -22,7 +22,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 10px;
   font-size: 11px;
   font-weight: bold;
 }
@@ -49,8 +48,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 10px;
   font-size: 11px;
   font-weight: bold;
-  border-left: 1px solid #ff6565;
+  border-left: 2px solid #ff6565;
 }
