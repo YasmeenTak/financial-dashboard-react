@@ -11,11 +11,10 @@ import Grid from '@material-ui/core/Grid';
 import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
 import BackupIcon from '@material-ui/icons/Backup';
 import { Button } from '@material-ui/core';
-// import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
-import SwitchTable from '../switchTable/switchTable';
+// import SwitchTable from '../switchTable/switchTable';
 
 function createData(
   debtorName,
@@ -86,7 +85,7 @@ export default function BasicTable() {
                     <TableCell align='center'>{row.email}</TableCell>
                     <TableCell align='center'>
                       <div style={{ display: 'flex' }}>
-                        <a href='#' style={{ color: '#7686F0' }}>
+                        <a href='/Charts' style={{ color: '#7686F0' }}>
                           Schedule
                         </a>
                         <BackupIcon

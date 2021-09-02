@@ -1,21 +1,15 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Sidedbar from './Components/Sidedbar/Sidedbar';
 import DebtorManagement from './Components/DebtorManagement/DebtorManagement';
 import NotificationManagement from './Components/NotificationManagement/Notification';
 import Notification from './Components/Notification/Notification';
-// import TableNotif from './Components/TableNotif/TableNotif';
-// import AddDebater from './Components/AddDebtor/AddDebater';
-
-import Home from './Components/Home/Home';
 import AddPersonnel from './Components/AddPersonnel/AddPersonnel';
 import PersonnelManagement from './Components/PersonnelManagement/PersonnelManagement';
-// import Tt from './Components/tt/tt';
 import AddName from './Components/AddName/AddName';
 import AddPerson from './Components/AddPerson/AddPerson';
 import AddInstruction2 from './Components/AddInstruction2/AddInstruction2';
@@ -24,7 +18,6 @@ import AddAdmin from './Components/AddAdmin/AddAdmin';
 import Instruction from './Components/Instruction/Instruction';
 import EditNotification from './Components/EditNotification/EditNotification';
 import Charts from './Components/Charts/Charts';
-// import Drawer from './Components/Drawer/Drawer';
 import Admins from './Components/AdminsPage/Admins';
 import Groups from './Components/GroupsPage/Groups';
 import Links from './Components/LinksPage/Links';
@@ -41,18 +34,14 @@ function App() {
         <Route exact path='/login'>
           <Login />
         </Route>
-        <Navbar onShowSidebarChange={handelSidebarState} />
-        {/* <AddName /> */}
-        {/* <Tt /> */}
-        {/* <TableNotif /> */}
-        {/* <Sidedbar /> */}
 
-        {/* <AddDebater /> */}
-        {/* <AddPersonnel /> */}
-        {/* <Drawer /> */}
+        <Navbar onShowSidebarChange={handelSidebarState} />
         <div className='containerr'>
           <Sidedbar sidebarState={sidebarState} />
           <Switch>
+            <Route exact path='/addLink'>
+              <AddLink />
+            </Route>
             <Route exact path='/'>
               <Charts />
             </Route>

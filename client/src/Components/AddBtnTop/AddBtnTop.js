@@ -5,8 +5,9 @@ import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import { useStyles } from './style';
+import Button from '@material-ui/core/Button';
 
-export default function AddBtnTop({handelClick}) {
+export default function AddBtnTop({ handelClick }) {
   const classes = useStyles();
 
   return (
@@ -14,20 +15,25 @@ export default function AddBtnTop({handelClick}) {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
           <Paper className={classes.paper}>
-            <img src='/assets/img/Capture.PNG' className={classes.image} />
+            <img
+              src='/assets/img/Capture.PNG'
+              className={classes.image}
+              alt='side img'
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Paper className={clsx(classes.paper, classes.paperRight)}>
             <div className={classes.borderAdd}>
               <div>
-                <AddCircleRoundedIcon className={classes.addBtn} />
+                <Button onClick={handelClick}>
+                  <AddCircleRoundedIcon className={classes.addBtn} />
+                </Button>
               </div>
               <Typography
                 variant='subtitle2'
                 gutterBottom
                 className={classes.addText}
-                onClick={handelClick}
               >
                 Add New
               </Typography>

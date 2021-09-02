@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-//import Navbar from '../Navbar/Navbar';
 import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';

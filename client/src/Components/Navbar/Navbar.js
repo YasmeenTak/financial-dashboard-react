@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -15,10 +15,19 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
+    color: '#2C3758',
   },
   toolbar: {
     minHeight: 20,
+    backgroundColor: 'white',
+  },
+  menuIcon: {
+    color: '#2C3758',
+  },
+  logoImg: {
+    width: 80,
+    height: 28,
+    marginRight: 110,
   },
 }));
 
@@ -35,8 +44,13 @@ export default function Navbar({ onShowSidebarChange }) {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static' color='sacndary'>
+      <AppBar position='static'>
         <Toolbar className={classes.toolbar}>
+          <img
+            src='/assets/img/logo.PNG'
+            className={classes.logoImg}
+            alt='logo'
+          />
           <IconButton
             edge='start'
             className={classes.menuButton}
@@ -44,6 +58,7 @@ export default function Navbar({ onShowSidebarChange }) {
             aria-label='menu'
           >
             <MenuIcon
+              className={classes.menuIcon}
               onClick={() => {
                 setShowSidebar(!showSidebar);
               }}

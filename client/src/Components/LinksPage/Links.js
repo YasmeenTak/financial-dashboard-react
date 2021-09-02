@@ -2,13 +2,21 @@ import React from 'react';
 import AddBtnTop from '../AddBtnTop/AddBtnTop';
 import TableLinks from '../TableLinks/TableLinks';
 import { useStyles } from './style';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Admins() {
   const classes = useStyles();
+  const history = useHistory();
 
+  const routeChange = () => {
+    let path = `addLink`;
+    history.push(path);
+  };
+  //<Link to='/addLink' />
   return (
     <div className={classes.root}>
-      <AddBtnTop handelClick={() => console.log('test2')} />
+      <AddBtnTop handelClick={routeChange} />
       <TableLinks />
     </div>
   );
