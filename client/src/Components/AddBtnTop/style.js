@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     borderRadius: 15,
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
   },
   image: {
     marginRight: 400,
@@ -23,12 +24,13 @@ const useStyles = makeStyles((theme) => ({
     color: '#ED1B24',
     textAlign: 'center',
   },
+  addBtnMain: { borderRadius: '50%'},
   addText: {
     textAlign: 'center',
     fontWeight: 'bold',
     color: 'black',
   },
-  paperRight: { padding: 25 },
+  paperRight: { padding: 21, boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' },
 }));
 
 export { useStyles };

@@ -13,7 +13,7 @@ export default function AddBtnTop({ handelClick }) {
   return (
     <div className={classes.addBtnTop}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={8} sm={8}>
           <Paper className={classes.paper}>
             <img
               src='/assets/img/Capture.PNG'
@@ -22,11 +22,11 @@ export default function AddBtnTop({ handelClick }) {
             />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={4} sm={4}>
           <Paper className={clsx(classes.paper, classes.paperRight)}>
             <div className={classes.borderAdd}>
               <div>
-                <Button onClick={handelClick}>
+                <Button onClick={handelClick} className={classes.addBtnMain}>
                   <AddCircleRoundedIcon className={classes.addBtn} />
                 </Button>
               </div>
