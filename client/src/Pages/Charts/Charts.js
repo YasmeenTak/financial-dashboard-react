@@ -4,10 +4,10 @@ import { useStyles } from './style';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import SimpleBarChart from '../ChartsCopm/SimpleBarChart';
-import DonutChart from '../ChartsCopm/DonutChart';
-import Dount from '../DountChartNew/Dount';
-import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
+import SimpleBarChart from '../../Components/ChartsCopm/SimpleBarChart';
+import DonutChart from '../../Components/ChartsCopm/DonutChart';
+import Dount from '../../Components/DountChartNew/Dount';
+import ResponsiblePersonCol from '../../Components/ResponsiblePersonCol/ResponsiblePersonCol';
 
 export default function Charts() {
   const classes = useStyles();

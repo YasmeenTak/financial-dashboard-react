@@ -1,26 +1,26 @@
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Login from './Components/Login/Login';
+import Login from './Pages/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import Sidedbar from './Components/Sidedbar/Sidedbar';
-import DebtorManagement from './Components/DebtorManagementPage/DebtorManagement';
-import NotificationManagement from './Components/NotificationManagementPage/Notification';
-import Notification from './Components/NotificationPage/Notification';
-import PersonnelManagement from './Components/PersonnelManagementPage/PersonnelManagement';
+import DebtorManagement from './Pages/DebtorManagementPage/DebtorManagement';
+import NotificationManagement from './Pages/NotificationManagementPage/Notification';
+import Notification from './Pages/NotificationPage/Notification';
+import PersonnelManagement from './Pages/PersonnelManagementPage/PersonnelManagement';
 import AddGroup from './Components/AddGroup/AddGroup';
 import AddPerson from './Components/AddPerson/AddPerson';
 import AddInstruction from './Components/AddInstruction/AddInstruction';
 import AddLink from './Components/AddLink/AddLink';
 import AddAdmin from './Components/AddAdmin/AddAdmin';
 import AddNotifManagement from './Components/AddNotifManagement/AddNotifManagement';
-import Instruction from './Components/InstructionPage/Instruction';
+import Instruction from './Pages/InstructionPage/Instruction';
 import EditNotification from './Components/EditNotification/EditNotification';
-import Charts from './Components/Charts/Charts';
-import Admins from './Components/AdminsPage/Admins';
-import Groups from './Components/GroupsPage/Groups';
-import Links from './Components/LinksPage/Links';
-import Archive from './Components/ArchivePage/Archive';
+import Charts from './Pages/Charts/Charts';
+import Admins from './Pages/AdminsPage/Admins';
+import Groups from './Pages/GroupsPage/Groups';
+import Links from './Pages/LinksPage/Links';
+import Archive from './Pages/ArchivePage/Archive';
 import AddDebtor from './Components/AddDebtor/AddDebtor';
 
 function App() {

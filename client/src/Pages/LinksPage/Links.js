@@ -1,21 +1,21 @@
 import React from 'react';
-import AddBtnTop from '../AddBtnTop/AddBtnTop';
+import AddBtnTop from '../../Components/AddBtnTop/AddBtnTop';
+import TableLinks from '../../Components/TableLinks/TableLinks';
 import { useStyles } from './style';
-import DebaterTable from '../DebtorsTable/DebtorsTable';
 import { useHistory } from 'react-router-dom';
 
-export default function DebtorManagement() {
+export default function Admins() {
   const classes = useStyles();
   const history = useHistory();
 
   const routeChange = () => {
-    let path = `AddDebtor`;
+    let path = `addLink`;
     history.push(path);
   };
   return (
     <div className={classes.root}>
       <AddBtnTop handelClick={routeChange} />
-      <DebaterTable />
+      <TableLinks />
     </div>
   );
 }

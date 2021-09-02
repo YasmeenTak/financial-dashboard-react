@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import { useStyles } from './style';
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
-import ResponsiblePersonCol from '../ResponsiblePersonCol/ResponsiblePersonCol';
+import ResponsiblePersonCol from '../../Components/ResponsiblePersonCol/ResponsiblePersonCol';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
 import { useHistory } from 'react-router-dom';

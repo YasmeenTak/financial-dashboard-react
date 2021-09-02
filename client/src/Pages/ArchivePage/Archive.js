@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import User from '../userArchive';
-import DetailsUser from '../DetailsUserArchive';
+import User from '../../Components//userArchive';
+import DetailsUser from '../../Components/DetailsUserArchive';
 import { makeStyles } from '@material-ui/core/styles';
 
 import './style.css';

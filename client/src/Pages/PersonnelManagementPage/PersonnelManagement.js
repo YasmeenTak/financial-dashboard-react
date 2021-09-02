@@ -1,6 +1,6 @@
 import React from 'react';
-import AddBtnTop from '../AddBtnTop/AddBtnTop';
-import TablePersonnelManagement from '../TablePersonnelManagement/TablePersonnelManagement';
+import AddBtnTop from '../../Components/AddBtnTop/AddBtnTop';
+import TablePersonnelManagement from '../../Components/TablePersonnelManagement/TablePersonnelManagement';
 import { useStyles } from './style';
 import { useHistory } from 'react-router-dom';
 

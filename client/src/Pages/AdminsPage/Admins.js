@@ -1,21 +1,21 @@
 import React from 'react';
-import AddBtnTop from '../AddBtnTop/AddBtnTop';
-import TableGroups from '../TableGroups/TableGroups';
+import AddBtnTop from '../../Components/AddBtnTop/AddBtnTop';
+import TableAdmins from '../../Components/TableAdmins/TableAdmins';
 import { useStyles } from './style';
 import { useHistory } from 'react-router-dom';
 
-export default function Groups() {
+export default function Admins() {
   const classes = useStyles();
   const history = useHistory();
 
   const routeChange = () => {
-    let path = `addGroup`;
+    let path = `addAdmin`;
     history.push(path);
   };
   return (
     <div className={classes.root}>
       <AddBtnTop handelClick={routeChange} />
-      <TableGroups />
+      <TableAdmins />
     </div>
   );
 }

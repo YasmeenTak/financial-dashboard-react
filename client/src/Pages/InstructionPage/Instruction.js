@@ -1,7 +1,7 @@
 import React from 'react';
-import AddBtnTop from '../AddBtnTop/AddBtnTop';
+import AddBtnTop from '../../Components/AddBtnTop/AddBtnTop';
 import { useStyles } from './style';
-import TableInstruction from '../TableInstruction/TableInstruction';
+import TableInstruction from '../../Components/TableInstruction/TableInstruction';
 import { useHistory } from 'react-router-dom';
 
 export default function Instruction() {
