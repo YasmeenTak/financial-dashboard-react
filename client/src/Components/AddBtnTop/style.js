@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   borderAdd: {
     border: '2px dashed #FD5353',
     borderRadius: 15,
-    padding: theme.spacing(5.4),
+    padding: theme.spacing(5),
   },
   addBtn: {
     fontSize: 60,

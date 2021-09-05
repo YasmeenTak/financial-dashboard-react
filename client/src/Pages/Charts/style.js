@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     borderRadius: '15px',
+    boxShadow: 'rgba(0, 0, 0, 0.30) 0px 5px 10px',
   },
   charts: {
     margin: '30px',
