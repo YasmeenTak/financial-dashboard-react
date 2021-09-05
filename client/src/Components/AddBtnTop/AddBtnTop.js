@@ -15,11 +15,28 @@ export default function AddBtnTop({ handelClick }) {
       <Grid container spacing={3}>
         <Grid item xs={8} sm={8}>
           <Paper className={classes.paper}>
-            <img
-              src='/assets/img/Capture.PNG'
-              className={classes.image}
-              alt='side img'
-            />
+            <div style={{ display: 'flex' }}>
+              <img
+                src='/assets/img/Capture.PNG'
+                className={classes.image}
+                alt='side img'
+              />
+              <div>
+                <Typography variant='h6' gutterBottom className={classes.title}>
+                  Add your Customer
+                </Typography>
+                {/* <Typography
+                  variant='subtitle2'
+                  gutterBottom
+                  className={classes.subTitle}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  quod debitis molestiae veniam, porro optio alias rerum officia
+                  explicabo, mollitia, expedita dolores nostrum ab quidem animi
+                  ex autem adipisci placeat.
+                </Typography> */}
+              </div>
+            </div>
           </Paper>
         </Grid>
         <Grid item xs={4} sm={4}>

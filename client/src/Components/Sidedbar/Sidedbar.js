@@ -20,7 +20,7 @@ export default function Sidedbar({ sidebarState }) {
       <div className='sidebarWapper'>
         <div className='sidebarMenu'>
           <ul className='sidebarList'>
-            <Link to='/Charts' style={{ textDecoration: 'none' }}>
+            <Link to='/Charts' className='link'>
               <li
                 // className='sidebarListItem'
                 className={item === 'CHARTS' ? 'checked' : 'sidebarListItem'}
@@ -30,10 +30,7 @@ export default function Sidedbar({ sidebarState }) {
               </li>
             </Link>
 
-            <Link
-              to='/NotificationManagement'
-              style={{ textDecoration: 'none' }}
-            >
+            <Link to='/NotificationManagement' className='link'>
               <li
                 className={
                   item === 'MANAGEMENT' ? 'checked' : 'sidebarListItem'
@@ -44,7 +41,7 @@ export default function Sidedbar({ sidebarState }) {
                 MANAGEMENT
               </li>
             </Link>
-            <Link to='/DebtorManagement' style={{ textDecoration: 'none' }}>
+            <Link to='/DebtorManagement' className='link'>
               <li
                 className={
                   item === 'DEBTOR MANAGEMENT' ? 'checked' : 'sidebarListItem'
@@ -54,7 +51,7 @@ export default function Sidedbar({ sidebarState }) {
                 <PeopleOutlineIcon className='sidebarIcon' /> DEBTOR MANAGEMENT
               </li>
             </Link>
-            <Link to='/PersonnelManagement' style={{ textDecoration: 'none' }}>
+            <Link to='/PersonnelManagement' className='link'>
               <li
                 className={
                   item === 'PERSONNEL MANAGEMENT'
@@ -67,14 +64,11 @@ export default function Sidedbar({ sidebarState }) {
                 MANAGEMENT
               </li>
             </Link>
-            <li
-              className={item === 'SETTINGS' ? 'checked' : 'sidebarListItem'}
-              onClick={() => setItem('SETTINGS')}
-            >
+            <li className='sidebarListItem'>
               <SettingsOutlinedIcon className='sidebarIcon' /> SETTINGS
             </li>
             <ul>
-              <Link to='/Admins' style={{ textDecoration: 'none' }}>
+              <Link to='/Admins' className='link'>
                 <li
                   className={
                     item === 'ADMINS' ? 'checked' : 'sidebarSubListItem'
@@ -85,7 +79,7 @@ export default function Sidedbar({ sidebarState }) {
                   ADMINS
                 </li>
               </Link>
-              <Link to='/Notification' style={{ textDecoration: 'none' }}>
+              <Link to='/Notification' className='link'>
                 <li
                   className={
                     item === 'NOTIFICATIONS' ? 'checked' : 'sidebarSubListItem'
@@ -96,7 +90,7 @@ export default function Sidedbar({ sidebarState }) {
                   NOTIFICATIONS
                 </li>
               </Link>
-              <Link to='/Groups' style={{ textDecoration: 'none' }}>
+              <Link to='/Groups' className='link'>
                 <li
                   className={
                     item === 'GROUPS' ? 'checked' : 'sidebarSubListItem'
@@ -107,7 +101,7 @@ export default function Sidedbar({ sidebarState }) {
                   GROUPS
                 </li>
               </Link>
-              <Link to='/Links' style={{ textDecoration: 'none' }}>
+              <Link to='/Links' className='link'>
                 <li
                   className={
                     item === 'LINKS' ? 'checked' : 'sidebarSubListItem'
@@ -119,7 +113,7 @@ export default function Sidedbar({ sidebarState }) {
                 </li>
               </Link>
 
-              <Link to='/Instruction' style={{ textDecoration: 'none' }}>
+              <Link to='/Instruction' className='link'>
                 <li
                   className={
                     item === 'INSTRUCTIONS' ? 'checked' : 'sidebarSubListItem'
@@ -131,7 +125,7 @@ export default function Sidedbar({ sidebarState }) {
                 </li>
               </Link>
             </ul>
-            <Link to='/Archive' style={{ textDecoration: 'none' }}>
+            <Link to='/Archive' className='link'>
               <li
                 className={item === 'ARCHIVE' ? 'checked' : 'sidebarListItem'}
                 onClick={() => setItem('ARCHIVE')}

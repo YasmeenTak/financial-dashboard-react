@@ -52,3 +52,8 @@
   font-weight: bold;
   border-left: 2px solid #ff6565;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
