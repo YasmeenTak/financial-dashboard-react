@@ -57,7 +57,7 @@ export default function BasicTable() {
         <Paper className={classes.paperMain}>
           <p className={classes.tableNotifiTitle}>Debtors</p>
           <TableContainer component={Paper} className={classes.tableContainer}>
-            <Table className={classes.table} aria-label='simple table'>
+            <Table className={classes.table} >
               <TableHead>
                 <TableRow style={{ backgroundColor: '#F5F6FA' }}>
                   <TableCell align='center'>DEBTOR NAME</TableCell>
