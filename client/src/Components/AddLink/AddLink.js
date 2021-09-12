@@ -5,6 +5,9 @@ import Paper from '@material-ui/core/Paper';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import TableLinks from '../TableLinks/TableLinks';
+import data from "./mock-data.json";
+
 export default function AddLink() {
   const classes = useStyles();
   const [links, setLinks] = useState();
@@ -19,6 +22,7 @@ export default function AddLink() {
 
     const fieldName = event.target.getAttribute('name');
     const fieldValue = event.target.value;
+    console.log('hi', event.target.value);
 
     const newFormData = { ...addFormData };
     newFormData[fieldName] = fieldValue;
@@ -28,6 +32,7 @@ export default function AddLink() {
 
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
+    console.log('hiiiiiiiiii');
 
     const newLink = {
       title: addFormData.title,
@@ -36,6 +41,7 @@ export default function AddLink() {
 
     const newLinks = [...links, newLink];
     setLinks(newLinks);
+    return <TableLinks newLink={newLinks} />;
   };
   return (
     <div className={classes.root}>
@@ -79,6 +85,8 @@ export default function AddLink() {
                   variant='contained'
                   color='secondary'
                   className={classes.AddBtn}
+                  // onClick={(e) => console.log(e.target.value, 'hi')}
+                  onSubmit={handleAddFormSubmit}
                 >
                   Add
                 </Button>

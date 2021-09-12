@@ -25,8 +25,9 @@ const rows = [
   createData('Testabeer', 'https://github.com/YasmeenTak'),
 ];
 
-export default function BasicTable() {
+export default function BasicTable(props) {
   const classes = useStyles();
+  console.log(props.newLinks,'here in table');
 
   return (
     <div className={classes.root}>
