@@ -31,6 +31,7 @@ export default function AddName() {
                 <Button
                   variant='contained'
                   color='secondary'
+                  type='submit'
                   className={classes.AddBtn}
                 >
                   Add

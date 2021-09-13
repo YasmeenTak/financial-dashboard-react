@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flex: 4,
+    flexGrow: 1,
+
     backgroundColor: '#f5f9ff',
   },
   paper: {
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '100px',
     paddingTop: '20px',
     paddingBottom: '50px',
-    // border:'1px solid red'
   },
   addTextField: {
     width: '350px',

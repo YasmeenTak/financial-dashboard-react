@@ -6,7 +6,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TableLinks from '../TableLinks/TableLinks';
-import data from "./mock-data.json";
+import data from './mock-data.json';
 
 export default function AddLink() {
   const classes = useStyles();
@@ -31,15 +31,14 @@ export default function AddLink() {
   };
 
   const handleAddFormSubmit = (event) => {
-    event.preventDefault();
     console.log('hiiiiiiiiii');
-
+    event.preventDefault();
     const newLink = {
       title: addFormData.title,
       url: addFormData.url,
     };
 
-    const newLinks = [...links, newLink];
+    const newLinks =[links, newLink];
     setLinks(newLinks);
     return <TableLinks newLink={newLinks} />;
   };
@@ -84,6 +83,7 @@ export default function AddLink() {
                 <Button
                   variant='contained'
                   color='secondary'
+                  type='submit'
                   className={classes.AddBtn}
                   // onClick={(e) => console.log(e.target.value, 'hi')}
                   onSubmit={handleAddFormSubmit}

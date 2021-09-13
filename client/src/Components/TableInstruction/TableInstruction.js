@@ -25,6 +25,8 @@ const rows = [
 export default function BasicTable() {
   const classes = useStyles();
 
+  const handleDeleteClick = () => {};
+
   return (
     <div className={classes.root}>
       <Grid container>

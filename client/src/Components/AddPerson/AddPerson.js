@@ -55,6 +55,7 @@ export default function AddPerson() {
                 <Button
                   variant='contained'
                   color='secondary'
+                  type='submit'
                   className={classes.AddPersonalBtn}
                 >
                   Add

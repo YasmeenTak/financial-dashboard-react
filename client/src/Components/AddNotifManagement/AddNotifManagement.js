@@ -146,6 +146,8 @@ export default function AddDebater() {
                 <Button
                   variant='contained'
                   color='secondary'
+                  type='submit'
+
                   className={classes.AddDebaterBtn}
                 >
                   Add

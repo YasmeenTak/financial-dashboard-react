@@ -47,6 +47,7 @@ export default function AddInstruction2() {
               <Button
                 variant='contained'
                 color='secondary'
+                type='submit'
                 className={classes.AddDebaterBtn}
               >
                 Add
