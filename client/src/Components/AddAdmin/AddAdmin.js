@@ -13,15 +13,16 @@ export default function AddAdmin() {
         <Paper className={classes.paper}>
           <p className={classes.addTitle}>
             <ArrowBackIcon className={classes.backArrow} />
-            Add 
+            Add
           </p>
-          <form className={classes.addForm} noValidate autoComplete='off'>
+          <form className={classes.addForm} autoComplete='off'>
             <Grid container spacing={3}>
               <Grid item lg={6} xs={12} sm={12}>
                 <TextField
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12} sm={12}>
@@ -31,6 +32,7 @@ export default function AddAdmin() {
                   className={classes.addTextField}
                   name='email'
                   autoComplete='email'
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12} sm={12}>
@@ -39,6 +41,7 @@ export default function AddAdmin() {
                   label='Password'
                   type='password'
                   autoComplete='current-password'
+                  required
                   className={classes.addTextField}
                 />
               </Grid>
@@ -46,6 +49,7 @@ export default function AddAdmin() {
                 <Button
                   variant='contained'
                   color='secondary'
+                  type='submit'
                   className={classes.AddBtn}
                 >
                   Add

@@ -53,13 +53,14 @@ export default function AddDebater() {
             <ArrowBackIcon className={classes.backArrow} />
             Add
           </p>
-          <form className={classes.addForm} noValidate autoComplete='off'>
+          <form className={classes.addForm} autoComplete='off'>
             <Grid container>
               <Grid item lg={6} xs={12}>
                 <TextField
                   id='standard-basic'
                   label='Name'
                   className={classes.addTextField}
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -69,6 +70,7 @@ export default function AddDebater() {
                   className={classes.addTextField}
                   name='email'
                   autoComplete='email'
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -76,6 +78,7 @@ export default function AddDebater() {
                   id='standard-basic '
                   label='Estate Number'
                   className={classes.addTextField}
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -84,6 +87,7 @@ export default function AddDebater() {
                   label='Phone'
                   name='number'
                   className={classes.addTextField}
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -93,6 +97,7 @@ export default function AddDebater() {
                   value={currency}
                   onChange={handleChange}
                   className={clsx(classes.addTextField, classes.selectInputAdd)}
+                  required
                 >
                   {currencies.map((option) => (
                     <MenuItem key={option.value} value={option.value}>
@@ -106,6 +111,7 @@ export default function AddDebater() {
                   id='standard-basic'
                   label='Address'
                   className={classes.addTextField}
+                  required
                 />
               </Grid>
               <Grid item lg={6} xs={12}>
@@ -115,11 +121,13 @@ export default function AddDebater() {
                   <InputLabel
                     htmlFor='standard-adornment-password'
                     style={{ fontSize: 13 }}
+                    required
                   >
                     Password
                   </InputLabel>
                   <Input
                     className={classes.addTextField}
+                    required
                     id='standard-adornment-password'
                     type={values.showPassword ? 'text' : 'password'}
                     value={values.password}

@@ -17,12 +17,13 @@ export default function AddInstruction2() {
             <ArrowBackIcon className={classes.backArrow} />
             Add
           </p>
-          <form className={classes.rootForm} noValidate autoComplete='off'>
+          <form className={classes.rootForm} autoComplete='off'>
             <Grid item lg={12} xs={12}>
               <TextField
                 id='standard-basic'
                 label='Title'
                 className={classes.addTextField}
+                required
               />
             </Grid>
             <Grid item lg={12} xs={12}>
@@ -31,6 +32,7 @@ export default function AddInstruction2() {
                 label='Content'
                 variant='outlined'
                 className={clsx(classes.addTextField, classes.contentTextFiled)}
+                required
               />
             </Grid>
             <Grid item lg={12} xs={12}>

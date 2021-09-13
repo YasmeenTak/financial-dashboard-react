@@ -6,7 +6,6 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TableLinks from '../TableLinks/TableLinks';
-import data from './mock-data.json';
 
 export default function AddLink() {
   const classes = useStyles();
@@ -32,14 +31,17 @@ export default function AddLink() {
 
   const handleAddFormSubmit = (event) => {
     console.log('hiiiiiiiiii');
+
     event.preventDefault();
     const newLink = {
       title: addFormData.title,
       url: addFormData.url,
     };
+    console.log(newLink);
 
-    const newLinks =[links, newLink];
+    const newLinks = [links, newLink];
     setLinks(newLinks);
+
     return <TableLinks newLink={newLinks} />;
   };
   return (
@@ -52,7 +54,6 @@ export default function AddLink() {
           <form
             className={classes.addForm}
             onSubmit={handleAddFormSubmit}
-            noValidate
             autoComplete='off'
           >
             <Grid container>
@@ -60,9 +61,9 @@ export default function AddLink() {
                 <TextField
                   id='standard-basic'
                   name='title'
+                  required
                   label='Title'
                   className={classes.addTextField}
-                  required
                   onChange={handleAddFormChange}
                 />
               </Grid>
@@ -70,11 +71,11 @@ export default function AddLink() {
                 <TextField
                   id='url'
                   label='URL'
+                  required
                   className={classes.addTextField}
                   name='url'
                   autoComplete='url'
                   type='url'
-                  required
                   onChange={handleAddFormChange}
                 />
               </Grid>

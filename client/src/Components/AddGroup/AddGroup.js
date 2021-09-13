@@ -16,7 +16,7 @@ export default function AddName() {
             <ArrowBackIcon className={classes.backArrow} />
             Add
           </p>
-          <form className={classes.addForm} noValidate autoComplete='off'>
+          <form className={classes.addForm} autoComplete='off'>
             <Grid container>
               <Grid item lg={6} xs={12}>
                 <TextField

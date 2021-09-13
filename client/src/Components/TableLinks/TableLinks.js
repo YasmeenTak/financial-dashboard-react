@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
 import Switch from '@material-ui/core/Switch';
 import { BiEditAlt } from 'react-icons/bi';
-
+import AddLink from '../AddLink/AddLink';
 function createData(title, url, action) {
   return { title, url, action };
 }
@@ -27,8 +27,7 @@ const rows = [
 
 export default function BasicTable(props) {
   const classes = useStyles();
-  console.log(props.newLinks,'here in table');
-
+  console.log(props.newLinks, 'here in table');
   return (
     <div className={classes.root}>
       <Grid container>
