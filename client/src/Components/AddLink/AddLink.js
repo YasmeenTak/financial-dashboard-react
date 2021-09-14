@@ -44,6 +44,7 @@ export default function AddLink() {
 
     return <TableLinks newLink={newLinks} />;
   };
+  
   return (
     <div className={classes.root}>
       <Grid container>
