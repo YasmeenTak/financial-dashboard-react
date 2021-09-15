@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   addTextField: {
-    width: '350px',
+    // width: '350px',
+    width: '25vw',
     '& .MuiInputBase-input': {
       fontSize: 13,
     },
@@ -49,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
     float: 'right',
     margin: '50px 100px 50px 0',
   },
-
 }));
 
 export { useStyles };

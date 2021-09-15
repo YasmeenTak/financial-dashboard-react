@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiInputBase-input': {},
   },
   addTextField: {
-    width: '400px',
+    // width: '400px',
+    width:'30vw',
   },
   contentTextFiled: {
     [`& fieldset`]: {

@@ -6,6 +6,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TableLinks from '../TableLinks/TableLinks';
+import data from "./mock-data.json";
 
 export default function AddLink() {
   const classes = useStyles();
