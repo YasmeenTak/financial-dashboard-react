@@ -31,7 +31,7 @@ export default function AddLink() {
   };
 
   const handleAddFormSubmit = (event) => {
-    console.log('hiiiiiiiiii');
+    // console.log('hiii');
 
     event.preventDefault();
     const newLink = {
